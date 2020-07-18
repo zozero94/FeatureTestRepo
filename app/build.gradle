@@ -34,4 +34,20 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
+    implementation deps.lifecycleExtensions
+    implementation deps.lifecycleCommonJava8
+    implementation deps.livedataExtensions
+    implementation deps.coroutinesRx2
+    implementation deps.coroutinesAndroid
+    implementation deps.timber
+    implementation deps.rxjava
+    implementation deps.rxandroid
+    implementation deps.rxkotlin
+    implementation deps.rxlifecycle
+    implementation deps.rxlifecycleComponents
+    implementation deps.gson
+    implementation deps.retrofit
+    implementation deps.converterGson
+    implementation deps.adapterRxjava2
+
 }
