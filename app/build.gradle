@@ -37,6 +37,7 @@ dependencies {
     implementation deps.lifecycleExtensions
     implementation deps.lifecycleCommonJava8
     implementation deps.livedataExtensions
+
     implementation deps.coroutinesRx2
     implementation deps.coroutinesAndroid
     implementation deps.timber
@@ -45,9 +46,6 @@ dependencies {
     implementation deps.rxkotlin
     implementation deps.rxlifecycle
     implementation deps.rxlifecycleComponents
-    implementation deps.gson
-    implementation deps.retrofit
-    implementation deps.converterGson
-    implementation deps.adapterRxjava2
+
 
 }

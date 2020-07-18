@@ -2,21 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f2b9e80c-69ac-458a-8eb6-1823c2b10d00" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/data/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/consumer-rules.pro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/proguard-rules.pro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/src/androidTest/java/com/example/data/ExampleInstrumentedTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/src/main/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/src/test/java/com/example/data/ExampleUnitTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/src/main/java/com/example/domain/MyClass.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/data/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/domain/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

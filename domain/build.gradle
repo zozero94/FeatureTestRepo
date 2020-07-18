@@ -4,6 +4,9 @@ apply plugin: 'kotlin'
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation deps.coroutinesRx2
+    implementation deps.coroutinesAndroid
+    implementation deps.timber
 }
 
 sourceCompatibility = "1.7"

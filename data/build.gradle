@@ -33,4 +33,12 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
+    implementation deps.coroutinesRx2
+    implementation deps.gson
+    implementation deps.retrofit
+    implementation deps.converterGson
+    implementation deps.adapterRxjava2
+    implementation deps.rxjava
+    implementation deps.rxkotlin
+    implementation deps.timber
 }
