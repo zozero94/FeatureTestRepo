@@ -7,7 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f2b9e80c-69ac-458a-8eb6-1823c2b10d00" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/coroutinetest/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/coroutinetest/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/coroutinetest/MainViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/coroutinetest/viewmodel/MainViewModel.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,14 +162,18 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="675" y="283" key="#com.intellij.ide.util.MemberChooser/0.0.1792.1120@0.0.1792.1120" timestamp="1595077278581" />
+    <state x="644" y="219" width="507" height="681" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1595146232839">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="644" y="219" width="507" height="681" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1595146232839" />
     <state x="484" y="322" key="AndroidCreateResourceFileDialog" timestamp="1595074304522">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="484" y="322" key="AndroidCreateResourceFileDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1595074304522" />
-    <state x="100" y="100" width="1592" height="920" key="DiffContextDialog" timestamp="1595141695281">
+    <state x="100" y="79" width="1592" height="940" key="DiffContextDialog" timestamp="1595146294073">
       <screen x="0" y="23" width="1792" height="1097" />
     </state>
-    <state x="100" y="100" width="1592" height="920" key="DiffContextDialog/0.23.1792.1097@0.23.1792.1097" timestamp="1595141695281" />
+    <state x="100" y="79" width="1592" height="940" key="DiffContextDialog/0.23.1792.1097@0.23.1792.1097" timestamp="1595146294073" />
     <state x="397" y="199" key="SettingsEditor" timestamp="1595072134553">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>

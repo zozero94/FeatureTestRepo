@@ -1,4 +1,4 @@
-package com.example.coroutinetest
+package com.example.coroutinetest.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
