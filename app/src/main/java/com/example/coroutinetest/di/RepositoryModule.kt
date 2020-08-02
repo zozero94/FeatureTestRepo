@@ -1,8 +1,7 @@
 package com.example.coroutinetest.di
 
+import com.example.data.repository.RepositoryImpl
 import com.example.domain.repository.Repository
-import com.example.domain.usecase.ApiUseCase
-import com.example.domain.usecase.UseCase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -11,9 +10,9 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(ActivityRetainedComponent::class)
-class AppModule {
+class RepositoryModule {
+
     @Singleton
     @Provides
-    fun provideUseCase(repository: Repository): UseCase = ApiUseCase(repository)
+    fun provideRepository(): Repository = RepositoryImpl()
 }
-

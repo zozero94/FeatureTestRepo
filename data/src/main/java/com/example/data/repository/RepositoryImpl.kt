@@ -7,9 +7,6 @@ import javax.inject.Singleton
 
 @Singleton
 class RepositoryImpl @Inject constructor() : Repository {
-    init {
-        Timber.e("레포 생성")
-    }
     override fun requestApi() {
         Timber.e("으이이잉???")
     }

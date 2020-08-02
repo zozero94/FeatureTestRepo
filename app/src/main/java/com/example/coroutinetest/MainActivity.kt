@@ -3,6 +3,8 @@ package com.example.coroutinetest
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.DataBindingUtil
+import com.example.coroutinetest.databinding.ActivityMainBinding
 import com.example.coroutinetest.viewmodel.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_main.*
@@ -13,10 +15,13 @@ class MainActivity : AppCompatActivity() {
     private val adapter = ApiAdapter()
 
     private val viewModel by viewModels<MainViewModel>()
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+        binding.lifecycleOwner = this
+        binding.vm = viewModel
 
         recyclerView.adapter = adapter
 
