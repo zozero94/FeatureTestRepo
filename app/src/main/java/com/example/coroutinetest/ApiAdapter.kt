@@ -5,10 +5,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.coroutinetest.data.Item
+import dagger.hilt.android.scopes.ActivityScoped
 import kotlinx.android.extensions.LayoutContainer
 import kotlinx.android.synthetic.main.list_item.view.*
 import kotlinx.android.synthetic.main.title.view.*
 
+@ActivityScoped
 class ApiAdapter : RecyclerView.Adapter<ViewHolder>() {
     private val item = mutableListOf<Item>()
 
@@ -46,6 +48,7 @@ class ApiAdapter : RecyclerView.Adapter<ViewHolder>() {
 
 }
 
+@ActivityScoped
 sealed class ViewHolder(override val containerView: View) :
     RecyclerView.ViewHolder(containerView), LayoutContainer {
 
