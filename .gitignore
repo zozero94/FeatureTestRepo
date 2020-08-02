@@ -1,6 +1,6 @@
 
-# Created by https://www.toptal.com/developers/gitignore/api/android,androidstudio,kotlin
-# Edit at https://www.toptal.com/developers/gitignore?templates=android,androidstudio,kotlin
+# Created by https://www.toptal.com/developers/gitignore/api/android,androidstudio,kotlin,java,gradle
+# Edit at https://www.toptal.com/developers/gitignore?templates=android,androidstudio,kotlin,java,gradle
 
 ### Android ###
 # Built application files
@@ -96,7 +96,7 @@ output.json
 # Replacement of .externalNativeBuild directories introduced
 # with Android Studio 3.5.
 
-### Kotlin ###
+### Java ###
 # Compiled class file
 
 # Log file
@@ -119,6 +119,37 @@ output.json
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 
+### Kotlin ###
+# Compiled class file
+
+# Log file
+
+# BlueJ files
+
+# Mobile Tools for Java (J2ME)
+
+# Package Files #
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+
+### Gradle ###
+.gradle
+
+# Ignore Gradle GUI config
+gradle-app.setting
+
+# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
+!gradle-wrapper.jar
+
+# Cache of project
+.gradletasknamecache
+
+# # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
+# gradle/wrapper/gradle-wrapper.properties
+
+### Gradle Patch ###
+**/build/
+
 ### AndroidStudio ###
 # Covers files to be ignored for android development using Android Studio.
 
@@ -131,7 +162,6 @@ hs_err_pid*
 # Generated files
 
 # Gradle files
-.gradle
 
 # Signing files
 .signing/
@@ -223,4 +253,4 @@ fabric.properties
 
 !/gradle/wrapper/gradle-wrapper.jar
 
-# End of https://www.toptal.com/developers/gitignore/api/android,androidstudio,kotlin
+# End of https://www.toptal.com/developers/gitignore/api/android,androidstudio,kotlin,java,gradle

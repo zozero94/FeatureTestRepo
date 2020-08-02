@@ -1,6 +1,7 @@
 package com.example.coroutinetest
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
@@ -26,6 +27,7 @@ class MainActivity : AppCompatActivity() {
         recyclerView.adapter = adapter
 
         button.setOnClickListener {
+            Toast.makeText(this, "눌림", Toast.LENGTH_SHORT).show()
             viewModel.requestApi()
         }
 
