@@ -1,8 +1,10 @@
 package com.example.myapplication
 
+import android.graphics.Color
 import android.text.Spannable
 import android.text.SpannableString
 import android.text.TextPaint
+import android.text.method.LinkMovementMethod
 import android.text.style.ClickableSpan
 import android.text.style.ForegroundColorSpan
 import android.util.Log
@@ -43,9 +45,9 @@ class FlexAdapter(@LayoutRes private val layoutRes: Int) : RecyclerView.Adapter<
             LayoutInflater.from(parent.context).inflate(layoutRes, parent, false)
         ).apply {
 
-            itemView.setOnClickListener {
+//            itemView.setOnClickListener {
 //                onClick?.invoke(listItem[adapterPosition])
-            }
+//            }
         }
     }
 
@@ -73,7 +75,8 @@ data class ViewHolder(override val containerView: View) : RecyclerView.ViewHolde
         containerView.item.text = s
         spans = containerView.item.text as SpannableString
         setSpannable(s)
-        startHighLight()
+//        startHighLight()
+        containerView.item.movementMethod = LinkMovementMethod.getInstance()
     }
 
     fun clearDisposable(){
@@ -124,6 +127,11 @@ data class ViewHolder(override val containerView: View) : RecyclerView.ViewHolde
 
     private fun spanClickable(start: Int, end: Int) {
         spans.setSpan(getClickableSpan(start), start, end, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+        textSelectedListener = {
+            spans.setSpan(
+                ForegroundColorSpan(Color.RED),
+                start, end, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+        }
     }
 
     private fun getClickableSpan(start: Int): ClickableSpan {
