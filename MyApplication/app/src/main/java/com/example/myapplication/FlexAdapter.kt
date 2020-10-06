@@ -8,6 +8,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.annotation.LayoutRes
 import androidx.annotation.MainThread
 import androidx.recyclerview.widget.RecyclerView
@@ -48,12 +49,19 @@ class FlexAdapter(@LayoutRes private val layoutRes: Int) : RecyclerView.Adapter<
 data class ViewHolder(override val containerView: View) : RecyclerView.ViewHolder(containerView),
     LayoutContainer {
     var textSelectedListener: ((Int) -> Unit)? = null
+
     private lateinit var spans: SpannableString
 
     fun bind(s: String) {
         containerView.item.text = s
-        spans = containerView.item.text as SpannableString
-        setSpannable(s)
+//        spans = containerView.item.text as SpannableString
+//        setSpannable(s)
+        containerView.button1.setOnClickListener {
+            Toast.makeText(containerView.context, "버튼 1", Toast.LENGTH_SHORT).show()
+        }
+        containerView.button2.setOnClickListener {
+            Toast.makeText(containerView.context, "버튼 1", Toast.LENGTH_SHORT).show()
+        }
     }
 
     private fun setSpannable(text: CharSequence) {
