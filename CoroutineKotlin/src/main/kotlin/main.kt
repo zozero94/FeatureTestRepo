@@ -1,7 +1,14 @@
+import io.reactivex.rxjava3.core.Observable
+import java.util.concurrent.TimeUnit
+
 fun main() {
-    val example = Example("", "")
-    println(example)
+    Observable.interval(500, TimeUnit.MILLISECONDS)
+        .map {
+            it+1
+        }
+        .subscribe {
+            println(it)
+        }
+    Thread.sleep(10000)
 }
 
-data class Example(val data1: String, val data2: String)
-data class Example2(val data1: String = "", val data2: String = "")
