@@ -66,7 +66,9 @@ private fun divideHighLight(
 ): Pair<Int, Int>? {
 
     val frontIndex =
-        if (highLightPair.first < preserveTarget.first) highLightPair.first to preserveTarget.first else null
+        if (highLightPair.first < preserveTarget.first)
+            highLightPair.first to preserveTarget.first
+        else null
     if (frontIndex != null) {
         highLight(frontIndex)
     }
@@ -75,7 +77,6 @@ private fun divideHighLight(
         if (preserveTarget.second < highLightPair.second)
             preserveTarget.second to highLightPair.second
         else null
-//    println("back $backIndex")
     if (backIndex != null && !isMultiText) {
         highLight(backIndex)
     }
