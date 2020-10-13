@@ -1,3 +1,5 @@
+include ':annotation_processor'
+include ':annotation'
 include ':data'
 include ':domain'
 include ':app'

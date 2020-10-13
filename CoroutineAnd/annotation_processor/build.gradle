@@ -1,0 +1,15 @@
+apply plugin: 'java-library'
+apply plugin: 'kotlin'
+
+
+dependencies {
+    implementation project(':annotation')
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'com.squareup:javapoet:1.13.0'
+    implementation "com.google.auto.service:auto-service:1.0-rc7"
+}
+
+sourceCompatibility = "1.8"
+targetCompatibility = "1.8"
