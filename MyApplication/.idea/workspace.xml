@@ -10,7 +10,18 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e068175-059e-4eb8-b780-bb51e66fb5b0" name="Default Changelist" comment="" />
+    <list default="true" id="7e068175-059e-4eb8-b780-bb51e66fb5b0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_databinding_databinding_adapters_4_0_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_databinding_databinding_common_4_0_1_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_databinding_databinding_runtime_4_0_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_databinding_viewbinding_4_0_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/myapplication/MainViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/myapplication/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/myapplication/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -177,30 +188,30 @@
       <screen x="0" y="23" width="1792" height="1097" />
     </state>
     <state x="100" y="100" width="1592" height="920" key="DiffContextDialog/-1920.23.1920.1057/1792.23.1920.1057/0.23.1792.1097@0.23.1792.1097" timestamp="1601970593836" />
-    <state width="1750" height="344" key="GridCell.Tab.0.bottom" timestamp="1602043439623">
+    <state width="1750" height="344" key="GridCell.Tab.0.bottom" timestamp="1602746843439">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state width="1750" height="344" key="GridCell.Tab.0.bottom/-1920.0.1920.1080/1792.0.1920.1080/0.0.1792.1120@0.0.1792.1120" timestamp="1601972557185" />
     <state width="1750" height="344" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1602043439623" />
-    <state width="1750" height="318" key="GridCell.Tab.0.bottom/1792.0.1920.1080/-1920.0.1920.1080/0.0.1792.1120@0.0.1792.1120" timestamp="1601989335877" />
-    <state width="1750" height="344" key="GridCell.Tab.0.center" timestamp="1602043439622">
+    <state width="1750" height="344" key="GridCell.Tab.0.bottom/1792.0.1920.1080/-1920.0.1920.1080/0.0.1792.1120@0.0.1792.1120" timestamp="1602746843439" />
+    <state width="1750" height="344" key="GridCell.Tab.0.center" timestamp="1602746843436">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state width="1750" height="344" key="GridCell.Tab.0.center/-1920.0.1920.1080/1792.0.1920.1080/0.0.1792.1120@0.0.1792.1120" timestamp="1601972557184" />
     <state width="1750" height="344" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1602043439622" />
-    <state width="1750" height="318" key="GridCell.Tab.0.center/1792.0.1920.1080/-1920.0.1920.1080/0.0.1792.1120@0.0.1792.1120" timestamp="1601989335875" />
-    <state width="1750" height="344" key="GridCell.Tab.0.left" timestamp="1602043439622">
+    <state width="1750" height="344" key="GridCell.Tab.0.center/1792.0.1920.1080/-1920.0.1920.1080/0.0.1792.1120@0.0.1792.1120" timestamp="1602746843436" />
+    <state width="1750" height="344" key="GridCell.Tab.0.left" timestamp="1602746843434">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state width="1750" height="344" key="GridCell.Tab.0.left/-1920.0.1920.1080/1792.0.1920.1080/0.0.1792.1120@0.0.1792.1120" timestamp="1601972557183" />
     <state width="1750" height="344" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1602043439622" />
-    <state width="1750" height="318" key="GridCell.Tab.0.left/1792.0.1920.1080/-1920.0.1920.1080/0.0.1792.1120@0.0.1792.1120" timestamp="1601989335873" />
-    <state width="1750" height="344" key="GridCell.Tab.0.right" timestamp="1602043439623">
+    <state width="1750" height="344" key="GridCell.Tab.0.left/1792.0.1920.1080/-1920.0.1920.1080/0.0.1792.1120@0.0.1792.1120" timestamp="1602746843434" />
+    <state width="1750" height="344" key="GridCell.Tab.0.right" timestamp="1602746843437">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state width="1750" height="344" key="GridCell.Tab.0.right/-1920.0.1920.1080/1792.0.1920.1080/0.0.1792.1120@0.0.1792.1120" timestamp="1601972557185" />
     <state width="1750" height="344" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1602043439623" />
-    <state width="1750" height="318" key="GridCell.Tab.0.right/1792.0.1920.1080/-1920.0.1920.1080/0.0.1792.1120@0.0.1792.1120" timestamp="1601989335876" />
+    <state width="1750" height="344" key="GridCell.Tab.0.right/1792.0.1920.1080/-1920.0.1920.1080/0.0.1792.1120@0.0.1792.1120" timestamp="1602746843437" />
     <state x="0" y="0" width="1792" height="1120" key="MergeDialog" timestamp="1602043135114">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
