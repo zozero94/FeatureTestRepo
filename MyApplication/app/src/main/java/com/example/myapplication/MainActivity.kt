@@ -12,13 +12,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val fuckingLongString = (1..10).map {
-            getString(R.string.long_text)
-        }.toString()
-        textView.text = fuckingLongString
-        textView.setTextSelectListener {
-            Toast.makeText(this, it.toString(), Toast.LENGTH_SHORT).show()
-        }
 
     }
 
