@@ -1,7 +1,7 @@
 package com.example.myapplication
 
 import android.os.Bundle
-import android.widget.Toast
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil.inflate
 import androidx.lifecycle.Observer
@@ -12,7 +12,9 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private val viewModel by lazy {
-        ViewModelProvider(this, ViewModelProvider.AndroidViewModelFactory(application)).get(MainViewModel::class.java)
+        ViewModelProvider(this, ViewModelProvider.AndroidViewModelFactory(application)).get(
+            MainViewModel::class.java
+        )
     }
 
 
@@ -25,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         viewModel.getResult().observe(this, Observer {
-            Toast.makeText(this,it,Toast.LENGTH_SHORT).show()
+            Log.e("zero", it.toString())
         })
     }
 

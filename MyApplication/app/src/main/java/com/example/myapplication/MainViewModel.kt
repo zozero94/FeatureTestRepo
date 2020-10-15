@@ -2,7 +2,6 @@ package com.example.myapplication
 
 import android.text.Editable
 import android.text.TextWatcher
-import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.jakewharton.rxrelay3.BehaviorRelay
@@ -20,7 +19,6 @@ class MainViewModel : ViewModel() {
         }
 
         override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-            Log.e("zero",s.toString())
             inputTextRelay.accept(s)
         }
 
@@ -32,7 +30,6 @@ class MainViewModel : ViewModel() {
     init {
         inputTextRelay.observeOn(Schedulers.computation())
             .throttleLast(100, TimeUnit.MILLISECONDS)
-            .distinctUntilChanged()
             .subscribe {
                 _result.postValue(it)
             }
