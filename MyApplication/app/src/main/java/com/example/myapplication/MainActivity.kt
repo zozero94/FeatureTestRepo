@@ -1,7 +1,6 @@
 package com.example.myapplication
 
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil.inflate
 import androidx.lifecycle.Observer
@@ -27,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         viewModel.getResult().observe(this, Observer {
-            Log.e("zero", it.toString())
+            binding.editText.findCasper()
         })
     }
 
