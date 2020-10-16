@@ -16,37 +16,27 @@ class CasperEditText @JvmOverloads constructor(
      * CharSequence 를 받아 Casper 문자에 Span 을 입힌다.
      */
     fun findCasper() {
-        val curText = text as Spannable
-        val operator = curText.firstOrNull() ?: return
+        val isCasper = caspers.find(text.toString())?.groups?.first()
         val isExistSpan = text?.getSpans(0, 0, CasperSpan::class.java)?.firstOrNull()
+        if (isCasper != null && isExistSpan == null) {
+            val span = CasperSpan(context)
 
-        if (operator == '/' && isExistSpan == null) {
-            val casperText = curText.substring(1 until curText.length)
-            val validation = isCasper(casperText)
+            val ssb = SpannableStringBuilder()
+                .append(CASPER)
+                .append(" ")
 
-            if (validation) {
-                val span = CasperSpan(context)
+            ssb.setSpan(
+                span,
+                0,
+                CASPER.length,
+                Spanned.SPAN_EXCLUSIVE_EXCLUSIVE
+            )
 
-                val ssb = SpannableStringBuilder()
-                    .append(CASPER)
-                    .append(" ")
-
-                ssb.setSpan(
-                    span,
-                    0,
-                    CASPER.length,
-                    Spanned.SPAN_EXCLUSIVE_EXCLUSIVE
-                )
-
-                setTextWithSelection(ssb, CASPER.length + 1)
-            }
+            setTextWithSelection(ssb, CASPER.length + 1)
 
         }
 
     }
-
-    private fun isCasper(casperText: CharSequence): Boolean =
-        casperText == "캐스퍼" || casperText == "케스퍼" || casperText == "casper" || casperText == "kasper"
 
     private val spanWatcher = object : SpanWatcher {
 
@@ -112,7 +102,8 @@ class CasperEditText @JvmOverloads constructor(
         super.onSelectionChanged(oStart, oEnd)
     }
 
-    companion object{
+    companion object {
+        private val caspers = "^/(?:casper|kasper|캐스퍼|케스퍼)".toRegex(RegexOption.IGNORE_CASE)
         const val CASPER = "/캐스퍼"
     }
 }
