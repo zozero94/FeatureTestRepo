@@ -28,17 +28,17 @@ class CasperEditText @JvmOverloads constructor(
                 val span = CasperSpan(context)
 
                 val ssb = SpannableStringBuilder()
-                    .append("/캐스퍼")
+                    .append(CASPER)
                     .append(" ")
 
                 ssb.setSpan(
                     span,
                     0,
-                    curText.length,
+                    CASPER.length,
                     Spanned.SPAN_EXCLUSIVE_EXCLUSIVE
                 )
 
-                setTextWithSelection(ssb, curText.length + 1)
+                setTextWithSelection(ssb, CASPER.length + 1)
             }
 
         }
@@ -110,5 +110,9 @@ class CasperEditText @JvmOverloads constructor(
             }
         }
         super.onSelectionChanged(oStart, oEnd)
+    }
+
+    companion object{
+        const val CASPER = "/캐스퍼"
     }
 }
