@@ -8,14 +8,14 @@
 
         <variable
             name="viewModel"
-            type="com.example.myapplication.MainViewModel" />
+            type="com.example.myapplication.ui.MainViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.example.myapplication.CasperEditText
+        <com.example.myapplication.ui.CasperEditText
             android:id="@+id/editText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -25,6 +25,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-        </com.example.myapplication.CasperEditText>
+        </com.example.myapplication.ui.CasperEditText>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
