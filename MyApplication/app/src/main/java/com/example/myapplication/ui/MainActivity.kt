@@ -7,6 +7,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.myapplication.R
 import com.example.myapplication.databinding.ActivityMainBinding
+import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,11 +22,18 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        binding = inflate(layoutInflater,
-            R.layout.activity_main, null, false)
+        binding = inflate(
+            layoutInflater,
+            R.layout.activity_main, null, false
+        )
         binding.viewModel = this.viewModel
         binding.lifecycleOwner = this
         setContentView(binding.root)
+
+        SimpleSnackBar.Builder
+            .with(context = this)
+            .into(binding.pos, Snackbar.LENGTH_LONG)
+            .show()
         viewModel.getResult().observe(this, Observer {
             binding.editText.findCasper()
         })

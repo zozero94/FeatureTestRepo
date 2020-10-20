@@ -14,42 +14,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e068175-059e-4eb8-b780-bb51e66fb5b0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_annotation_annotation_1_1_0_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_annotation_annotation_1_1_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_arch_core_core_common_2_1_0_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_arch_core_core_common_2_1_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_collection_collection_1_1_0_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_collection_collection_1_1_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_constraintlayout_constraintlayout_solver_2_0_2_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_constraintlayout_constraintlayout_solver_2_0_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_databinding_databinding_common_4_0_2_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_databinding_databinding_common_4_0_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_common_2_1_0_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_common_2_1_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_findbugs_jsr305_2_0_1_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_findbugs_jsr305_2_0_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_gson_gson_2_8_6_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_gson_gson_2_8_6.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_jakewharton_rxrelay3_rxrelay_3_0_0_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_jakewharton_rxrelay3_rxrelay_3_0_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_javawriter_2_1_1_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_javawriter_2_1_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__io_reactivex_rxjava2_rxjava_2_2_12_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__io_reactivex_rxjava2_rxjava_2_2_12.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__io_reactivex_rxjava2_rxkotlin_2_4_0_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__io_reactivex_rxjava2_rxkotlin_2_4_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__io_reactivex_rxjava3_rxjava_3_0_3_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__io_reactivex_rxjava3_rxjava_3_0_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__javax_inject_javax_inject_1_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__javax_inject_javax_inject_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_12_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_12.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_13_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_13.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_integration_1_3_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_integration_1_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_library_1_3_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_library_1_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_annotations_13_0_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_annotations_13_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_android_extensions_runtime_1_3_72_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_android_extensions_runtime_1_3_72.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_1_3_72_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_1_3_72.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_common_1_3_72_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_common_1_3_72.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlinx_kotlinx_coroutines_android_1_3_8_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlinx_kotlinx_coroutines_android_1_3_8.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlinx_kotlinx_coroutines_core_1_3_8_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlinx_kotlinx_coroutines_core_1_3_8.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_reactivestreams_reactive_streams_1_0_3_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_reactivestreams_reactive_streams_1_0_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/myapplication/ui/SimpleSnackBar.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/myapplication/ui/TooltipView.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/snackbar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/myapplication/CasperEditText.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/myapplication/ui/CasperEditText.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/myapplication/CasperSpan.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/myapplication/ui/CasperSpan.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/myapplication/ClickableTextView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/myapplication/ui/ClickableTextView.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/myapplication/FlexAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/myapplication/ui/FlexAdapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/myapplication/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/myapplication/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/myapplication/ui/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/myapplication/ui/MainActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,7 +28,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[R3CM80LXY7B]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[R39N30284EY]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -91,8 +62,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin File" />
         <option value="Kotlin Class" />
+        <option value="Kotlin File" />
+        <option value="layoutResourceFile" />
       </list>
     </option>
   </component>
@@ -106,18 +78,30 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="R3CM80LXY7B" />
-    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-10-16T07:44:03.767Z" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="R39N30284EY" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-10-20T07:00:42.486Z" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="android-custom-view/Users/zero/.gradle/caches/modules-2/files-2.1/androidx.appcompat/appcompat/1.2.0/13e8ff89631c2e101eb6bddd12c2fb4bbd74b15d/appcompat-1.2.0-sources.jar!/androidx/appcompat/widget/AppCompatImageButton.java_SELECTED" value="AppCompatImageButton" />
+    <property name="android-custom-view/Users/zero/.gradle/caches/modules-2/files-2.1/androidx.appcompat/appcompat/1.2.0/13e8ff89631c2e101eb6bddd12c2fb4bbd74b15d/appcompat-1.2.0-sources.jar!/androidx/appcompat/widget/AppCompatImageView.java_SELECTED" value="AppCompatImageView" />
+    <property name="android-custom-view/Users/zero/.gradle/caches/modules-2/files-2.1/androidx.appcompat/appcompat/1.2.0/13e8ff89631c2e101eb6bddd12c2fb4bbd74b15d/appcompat-1.2.0-sources.jar!/androidx/appcompat/widget/AppCompatTextView.java_SELECTED" value="AppCompatTextView" />
     <property name="android-custom-view/Users/zero/Desktop/git/zojae031/FeatureTextRepo/MyApplication/app/src/main/java/com/example/myapplication/CasperEditText.kt_SELECTED" value="CasperEditText" />
     <property name="android-custom-view/Users/zero/Desktop/git/zojae031/FeatureTextRepo/MyApplication/app/src/main/java/com/example/myapplication/ui/ClickableTextView.kt_SELECTED" value="ClickableTextView" />
+    <property name="android-custom-view/Users/zero/Desktop/git/zojae031/FeatureTextRepo/MyApplication/app/src/main/java/com/example/myapplication/ui/SimpleSnackBar.kt_SELECTED" value="SimpleSnackBar" />
+    <property name="android-custom-view/Users/zero/Desktop/git/zojae031/FeatureTextRepo/MyApplication/app/src/main/java/com/example/myapplication/ui/TooltipView.kt_SELECTED" value="TooltipView" />
     <property name="android-custom-view/Users/zero/Library/Android/sdk/sources/android-29/android/view/View.java_SELECTED" value="View" />
+    <property name="android-custom-view/Users/zero/Library/Android/sdk/sources/android-29/android/widget/ImageView.java_SELECTED" value="ImageView" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="multi-representation-preview/Users/zero/.gradle/caches/modules-2/files-2.1/androidx.appcompat/appcompat/1.2.0/13e8ff89631c2e101eb6bddd12c2fb4bbd74b15d/appcompat-1.2.0-sources.jar!/androidx/appcompat/widget/AppCompatImageButton.java_selected" value="Custom views" />
+    <property name="multi-representation-preview/Users/zero/.gradle/caches/modules-2/files-2.1/androidx.appcompat/appcompat/1.2.0/13e8ff89631c2e101eb6bddd12c2fb4bbd74b15d/appcompat-1.2.0-sources.jar!/androidx/appcompat/widget/AppCompatImageView.java_selected" value="Custom views" />
+    <property name="multi-representation-preview/Users/zero/.gradle/caches/modules-2/files-2.1/androidx.appcompat/appcompat/1.2.0/13e8ff89631c2e101eb6bddd12c2fb4bbd74b15d/appcompat-1.2.0-sources.jar!/androidx/appcompat/widget/AppCompatTextView.java_selected" value="Custom views" />
     <property name="multi-representation-preview/Users/zero/Desktop/git/zojae031/FeatureTextRepo/MyApplication/app/src/main/java/com/example/myapplication/CasperEditText.kt_selected" value="Custom views" />
     <property name="multi-representation-preview/Users/zero/Desktop/git/zojae031/FeatureTextRepo/MyApplication/app/src/main/java/com/example/myapplication/ui/ClickableTextView.kt_selected" value="Custom views" />
+    <property name="multi-representation-preview/Users/zero/Desktop/git/zojae031/FeatureTextRepo/MyApplication/app/src/main/java/com/example/myapplication/ui/SimpleSnackBar.kt_selected" value="Custom views" />
+    <property name="multi-representation-preview/Users/zero/Desktop/git/zojae031/FeatureTextRepo/MyApplication/app/src/main/java/com/example/myapplication/ui/TooltipView.kt_selected" value="Custom views" />
     <property name="multi-representation-preview/Users/zero/Library/Android/sdk/sources/android-29/android/view/View.java_selected" value="Custom views" />
+    <property name="multi-representation-preview/Users/zero/Library/Android/sdk/sources/android-29/android/widget/ImageView.java_selected" value="Custom views" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -125,6 +109,14 @@
   </component>
   <component name="PsdUISettings">
     <option name="MODULE_TAB" value="Signing Configs" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.example.myapplication.ui" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/java/com/example/myapplication/ui" />
+    </key>
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
@@ -260,48 +252,52 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="360" y="222" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1602034993187" />
-    <state x="675" y="283" key="#com.intellij.ide.util.MemberChooser" timestamp="1602766056835">
+    <state x="675" y="283" key="#com.intellij.ide.util.MemberChooser" timestamp="1603177064061">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="675" y="283" key="#com.intellij.ide.util.MemberChooser/-1920.0.1920.1080/1792.0.1920.1080/0.0.1792.1120@0.0.1792.1120" timestamp="1601972705338" />
-    <state x="675" y="283" key="#com.intellij.ide.util.MemberChooser/1792.0.1920.1080/-1920.0.1920.1080/0.0.1792.1120@0.0.1792.1120" timestamp="1602766056835" />
-    <state x="649" y="345" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1603176919225">
+    <state x="675" y="283" key="#com.intellij.ide.util.MemberChooser/1792.0.1920.1080/-1920.0.1920.1080/0.0.1792.1120@0.0.1792.1120" timestamp="1603177064061" />
+    <state x="649" y="345" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1603176930784">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="649" y="345" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/1792.0.1920.1080/-1920.0.1920.1080/0.0.1792.1120@0.0.1792.1120" timestamp="1603176919225" />
+    <state x="649" y="345" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/1792.0.1920.1080/-1920.0.1920.1080/0.0.1792.1120@0.0.1792.1120" timestamp="1603176930784" />
     <state x="100" y="79" width="1433" height="896" key="DiffContextDialog" timestamp="1602834394078">
       <screen x="0" y="23" width="1792" height="1097" />
     </state>
     <state x="100" y="100" width="1592" height="920" key="DiffContextDialog/-1920.23.1920.1057/1792.23.1920.1057/0.23.1792.1097@0.23.1792.1097" timestamp="1601970593836" />
     <state x="100" y="79" width="1433" height="896" key="DiffContextDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1602834292567" />
     <state x="100" y="79" width="1433" height="896" key="DiffContextDialog/0.23.1792.1097@0.23.1792.1097" timestamp="1602834394078" />
-    <state width="1750" height="318" key="GridCell.Tab.0.bottom" timestamp="1603173919517">
-      <screen x="0" y="0" width="1792" height="1120" />
+    <state width="1878" height="344" key="GridCell.Tab.0.bottom" timestamp="1603178040476">
+      <screen x="1792" y="0" width="1920" height="1080" />
     </state>
     <state width="1750" height="344" key="GridCell.Tab.0.bottom/-1920.0.1920.1080/1792.0.1920.1080/0.0.1792.1120@0.0.1792.1120" timestamp="1601972557185" />
     <state width="1750" height="344" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1602834065600" />
-    <state width="1750" height="318" key="GridCell.Tab.0.bottom/1792.0.1920.1080/-1920.0.1920.1080/0.0.1792.1120@0.0.1792.1120" timestamp="1603173919517" />
+    <state width="1750" height="318" key="GridCell.Tab.0.bottom/1792.0.1920.1080/-1920.0.1920.1080/0.0.1792.1120@0.0.1792.1120" timestamp="1603177251128" />
+    <state width="1878" height="344" key="GridCell.Tab.0.bottom/1792.0.1920.1080/-1920.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1603178040476" />
     <state width="1750" height="318" key="GridCell.Tab.0.bottom/1792.0.1920.1080/-1920.0.1920.1080/0.23.1792.1097@0.23.1792.1097" timestamp="1602765042169" />
-    <state width="1750" height="318" key="GridCell.Tab.0.center" timestamp="1603173919514">
-      <screen x="0" y="0" width="1792" height="1120" />
+    <state width="1878" height="344" key="GridCell.Tab.0.center" timestamp="1603178040473">
+      <screen x="1792" y="0" width="1920" height="1080" />
     </state>
     <state width="1750" height="344" key="GridCell.Tab.0.center/-1920.0.1920.1080/1792.0.1920.1080/0.0.1792.1120@0.0.1792.1120" timestamp="1601972557184" />
     <state width="1750" height="344" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1602834065599" />
-    <state width="1750" height="318" key="GridCell.Tab.0.center/1792.0.1920.1080/-1920.0.1920.1080/0.0.1792.1120@0.0.1792.1120" timestamp="1603173919514" />
+    <state width="1750" height="318" key="GridCell.Tab.0.center/1792.0.1920.1080/-1920.0.1920.1080/0.0.1792.1120@0.0.1792.1120" timestamp="1603177251125" />
+    <state width="1878" height="344" key="GridCell.Tab.0.center/1792.0.1920.1080/-1920.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1603178040473" />
     <state width="1750" height="318" key="GridCell.Tab.0.center/1792.0.1920.1080/-1920.0.1920.1080/0.23.1792.1097@0.23.1792.1097" timestamp="1602765042166" />
-    <state width="1750" height="318" key="GridCell.Tab.0.left" timestamp="1603173919513">
-      <screen x="0" y="0" width="1792" height="1120" />
+    <state width="1878" height="344" key="GridCell.Tab.0.left" timestamp="1603178040472">
+      <screen x="1792" y="0" width="1920" height="1080" />
     </state>
     <state width="1750" height="344" key="GridCell.Tab.0.left/-1920.0.1920.1080/1792.0.1920.1080/0.0.1792.1120@0.0.1792.1120" timestamp="1601972557183" />
     <state width="1750" height="344" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1602834065598" />
-    <state width="1750" height="318" key="GridCell.Tab.0.left/1792.0.1920.1080/-1920.0.1920.1080/0.0.1792.1120@0.0.1792.1120" timestamp="1603173919513" />
+    <state width="1750" height="318" key="GridCell.Tab.0.left/1792.0.1920.1080/-1920.0.1920.1080/0.0.1792.1120@0.0.1792.1120" timestamp="1603177251124" />
+    <state width="1878" height="344" key="GridCell.Tab.0.left/1792.0.1920.1080/-1920.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1603178040472" />
     <state width="1750" height="318" key="GridCell.Tab.0.left/1792.0.1920.1080/-1920.0.1920.1080/0.23.1792.1097@0.23.1792.1097" timestamp="1602765042164" />
-    <state width="1750" height="318" key="GridCell.Tab.0.right" timestamp="1603173919515">
-      <screen x="0" y="0" width="1792" height="1120" />
+    <state width="1878" height="344" key="GridCell.Tab.0.right" timestamp="1603178040475">
+      <screen x="1792" y="0" width="1920" height="1080" />
     </state>
     <state width="1750" height="344" key="GridCell.Tab.0.right/-1920.0.1920.1080/1792.0.1920.1080/0.0.1792.1120@0.0.1792.1120" timestamp="1601972557185" />
     <state width="1750" height="344" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1602834065600" />
-    <state width="1750" height="318" key="GridCell.Tab.0.right/1792.0.1920.1080/-1920.0.1920.1080/0.0.1792.1120@0.0.1792.1120" timestamp="1603173919515" />
+    <state width="1750" height="318" key="GridCell.Tab.0.right/1792.0.1920.1080/-1920.0.1920.1080/0.0.1792.1120@0.0.1792.1120" timestamp="1603177251126" />
+    <state width="1878" height="344" key="GridCell.Tab.0.right/1792.0.1920.1080/-1920.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1603178040475" />
     <state width="1750" height="318" key="GridCell.Tab.0.right/1792.0.1920.1080/-1920.0.1920.1080/0.23.1792.1097@0.23.1792.1097" timestamp="1602765042168" />
     <state width="1750" height="391" key="GridCell.Tab.1.bottom" timestamp="1602812563600">
       <screen x="0" y="0" width="1792" height="1120" />
@@ -349,12 +345,12 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="548" y="317" width="695" height="486" key="find.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1602760226176" />
-    <state x="352" y="293" width="721" height="1044" key="recent.locations.popup" timestamp="1603173862136">
+    <state x="352" y="293" width="721" height="1044" key="recent.locations.popup" timestamp="1603177351341">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="352" y="293" width="721" height="1044" key="recent.locations.popup/-1920.0.1920.1080/1792.0.1920.1080/0.0.1792.1120@0.0.1792.1120" timestamp="1601972609952" />
     <state x="352" y="293" width="721" height="1044" key="recent.locations.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1602812548583" />
-    <state x="352" y="293" width="721" height="1044" key="recent.locations.popup/1792.0.1920.1080/-1920.0.1920.1080/0.0.1792.1120@0.0.1792.1120" timestamp="1603173862136" />
+    <state x="352" y="293" width="721" height="1044" key="recent.locations.popup/1792.0.1920.1080/-1920.0.1920.1080/0.0.1792.1120@0.0.1792.1120" timestamp="1603177351341" />
     <state x="658" y="197" key="refactoring.ChangeSignatureDialog" timestamp="1601962920184">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
