@@ -33,38 +33,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e068175-059e-4eb8-b780-bb51e66fb5b0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_common_2_3_0_beta01.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_2_3_0_beta01_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_core_2_3_0_beta01_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_core_ktx_2_3_0_beta01_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_ktx_2_3_0_beta01_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_2_3_0_beta01_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_ktx_2_3_0_beta01_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_1_4_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_common_1_4_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlinx_kotlinx_coroutines_android_1_3_9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlinx_kotlinx_coroutines_core_jvm_1_3_9.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_arch_core_core_runtime_2_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_arch_core_core_runtime_2_1_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_common_2_1_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_2_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_core_2_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_2_1_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_1_3_72.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_common_1_3_72.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlinx_kotlinx_coroutines_android_1_3_8.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlinx_kotlinx_coroutines_core_1_3_8.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/myapplication/ui/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/myapplication/ui/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/myapplication/ui/MainViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/myapplication/ui/MainViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/myapplication/ui/SimpleSnackBar.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/myapplication/ui/SimpleSnackBar.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/kasper_bg.9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/kasper_bg.9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/kasper_bg.9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/kasper_bg.9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/snackbar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/kasper_tooltip.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -336,36 +306,36 @@
     <state x="100" y="79" width="1433" height="896" key="DiffContextDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1602834292567" />
     <state x="100" y="79" width="1433" height="896" key="DiffContextDialog/0.23.1792.1097@0.23.1792.1097" timestamp="1602834394078" />
     <state x="100" y="57" width="1433" height="915" key="DiffContextDialog/1792.23.1920.1057/-1920.0.1920.1080/0.23.1792.1097@0.23.1792.1097" timestamp="1603865281832" />
-    <state width="1750" height="377" key="GridCell.Tab.0.bottom" timestamp="1603866283587">
+    <state width="1750" height="377" key="GridCell.Tab.0.bottom" timestamp="1603866855142">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state width="1750" height="344" key="GridCell.Tab.0.bottom/-1920.0.1920.1080/1792.0.1920.1080/0.0.1792.1120@0.0.1792.1120" timestamp="1601972557185" />
     <state width="1750" height="344" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1602834065600" />
-    <state width="1750" height="377" key="GridCell.Tab.0.bottom/1792.0.1920.1080/-1920.0.1920.1080/0.0.1792.1120@0.0.1792.1120" timestamp="1603866283587" />
+    <state width="1750" height="377" key="GridCell.Tab.0.bottom/1792.0.1920.1080/-1920.0.1920.1080/0.0.1792.1120@0.0.1792.1120" timestamp="1603866855142" />
     <state width="1878" height="360" key="GridCell.Tab.0.bottom/1792.0.1920.1080/-1920.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1603184242786" />
     <state width="1750" height="318" key="GridCell.Tab.0.bottom/1792.0.1920.1080/-1920.0.1920.1080/0.23.1792.1097@0.23.1792.1097" timestamp="1602765042169" />
-    <state width="1750" height="377" key="GridCell.Tab.0.center" timestamp="1603866283585">
+    <state width="1750" height="377" key="GridCell.Tab.0.center" timestamp="1603866855139">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state width="1750" height="344" key="GridCell.Tab.0.center/-1920.0.1920.1080/1792.0.1920.1080/0.0.1792.1120@0.0.1792.1120" timestamp="1601972557184" />
     <state width="1750" height="344" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1602834065599" />
-    <state width="1750" height="377" key="GridCell.Tab.0.center/1792.0.1920.1080/-1920.0.1920.1080/0.0.1792.1120@0.0.1792.1120" timestamp="1603866283585" />
+    <state width="1750" height="377" key="GridCell.Tab.0.center/1792.0.1920.1080/-1920.0.1920.1080/0.0.1792.1120@0.0.1792.1120" timestamp="1603866855139" />
     <state width="1878" height="360" key="GridCell.Tab.0.center/1792.0.1920.1080/-1920.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1603184242784" />
     <state width="1750" height="318" key="GridCell.Tab.0.center/1792.0.1920.1080/-1920.0.1920.1080/0.23.1792.1097@0.23.1792.1097" timestamp="1602765042166" />
-    <state width="1750" height="377" key="GridCell.Tab.0.left" timestamp="1603866283584">
+    <state width="1750" height="377" key="GridCell.Tab.0.left" timestamp="1603866855138">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state width="1750" height="344" key="GridCell.Tab.0.left/-1920.0.1920.1080/1792.0.1920.1080/0.0.1792.1120@0.0.1792.1120" timestamp="1601972557183" />
     <state width="1750" height="344" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1602834065598" />
-    <state width="1750" height="377" key="GridCell.Tab.0.left/1792.0.1920.1080/-1920.0.1920.1080/0.0.1792.1120@0.0.1792.1120" timestamp="1603866283584" />
+    <state width="1750" height="377" key="GridCell.Tab.0.left/1792.0.1920.1080/-1920.0.1920.1080/0.0.1792.1120@0.0.1792.1120" timestamp="1603866855138" />
     <state width="1878" height="360" key="GridCell.Tab.0.left/1792.0.1920.1080/-1920.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1603184242783" />
     <state width="1750" height="318" key="GridCell.Tab.0.left/1792.0.1920.1080/-1920.0.1920.1080/0.23.1792.1097@0.23.1792.1097" timestamp="1602765042164" />
-    <state width="1750" height="377" key="GridCell.Tab.0.right" timestamp="1603866283586">
+    <state width="1750" height="377" key="GridCell.Tab.0.right" timestamp="1603866855140">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state width="1750" height="344" key="GridCell.Tab.0.right/-1920.0.1920.1080/1792.0.1920.1080/0.0.1792.1120@0.0.1792.1120" timestamp="1601972557185" />
     <state width="1750" height="344" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1602834065600" />
-    <state width="1750" height="377" key="GridCell.Tab.0.right/1792.0.1920.1080/-1920.0.1920.1080/0.0.1792.1120@0.0.1792.1120" timestamp="1603866283586" />
+    <state width="1750" height="377" key="GridCell.Tab.0.right/1792.0.1920.1080/-1920.0.1920.1080/0.0.1792.1120@0.0.1792.1120" timestamp="1603866855140" />
     <state width="1878" height="360" key="GridCell.Tab.0.right/1792.0.1920.1080/-1920.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1603184242785" />
     <state width="1750" height="318" key="GridCell.Tab.0.right/1792.0.1920.1080/-1920.0.1920.1080/0.23.1792.1097@0.23.1792.1097" timestamp="1602765042168" />
     <state width="1750" height="391" key="GridCell.Tab.1.bottom" timestamp="1602812563600">
