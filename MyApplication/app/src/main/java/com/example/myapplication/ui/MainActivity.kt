@@ -29,10 +29,7 @@ class MainActivity : AppCompatActivity() {
         binding.lifecycleOwner = this
         setContentView(binding.root)
 
-        SimpleSnackBar.Builder
-            .with(context = this)
-            .into(binding.pos, Snackbar.LENGTH_INDEFINITE)
-            .show()
+
     }
 
 

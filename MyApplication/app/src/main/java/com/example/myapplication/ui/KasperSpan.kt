@@ -8,23 +8,23 @@ import android.view.View
 import androidx.core.content.ContextCompat
 import com.example.myapplication.R
 
-class CasperSpan(
+class KasperSpan(
     val context: Context,
-    val click: ((Long) -> Unit)? = null
+    val kasperCommand: String
 ) : ClickableSpan() {
 
 
-    override fun onClick(widget: View) {
-        click?.invoke(123)
-    }
+    override fun onClick(widget: View) {}
 
     override fun updateDrawState(ds: TextPaint) {
         ds.isUnderlineText = false
-        ds.color = ContextCompat.getColor(context,
+        ds.color = ContextCompat.getColor(
+            context,
             R.color.white
         )
         ds.typeface = Typeface.create(ds.typeface, Typeface.BOLD)
-        ds.bgColor = ContextCompat.getColor(context,
+        ds.bgColor = ContextCompat.getColor(
+            context,
             R.color.black
         )
     }

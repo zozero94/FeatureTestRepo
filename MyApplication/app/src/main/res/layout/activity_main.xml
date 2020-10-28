@@ -26,7 +26,7 @@
 
         </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
-        <com.example.myapplication.ui.CasperEditText
+        <com.example.myapplication.ui.KasperEditText
             android:id="@+id/editText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -36,6 +36,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-        </com.example.myapplication.ui.CasperEditText>
+        </com.example.myapplication.ui.KasperEditText>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

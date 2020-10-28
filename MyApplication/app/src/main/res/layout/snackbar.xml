@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TextView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/snackText"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -10,5 +9,5 @@
     android:text="캐스퍼입니다. 궁금한 건 제게 물어보세요."
     android:textAlignment="center"
     android:textColor="@color/white"
-    android:textSize="13sp"/>
+    android:textSize="13sp" />
 
