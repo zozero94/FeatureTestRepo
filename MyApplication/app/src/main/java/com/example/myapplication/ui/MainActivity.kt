@@ -3,7 +3,6 @@ package com.example.myapplication.ui
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil.inflate
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.myapplication.R
 import com.example.myapplication.databinding.ActivityMainBinding
@@ -32,11 +31,8 @@ class MainActivity : AppCompatActivity() {
 
         SimpleSnackBar.Builder
             .with(context = this)
-            .into(binding.pos, Snackbar.LENGTH_LONG)
+            .into(binding.pos, Snackbar.LENGTH_INDEFINITE)
             .show()
-        viewModel.getResult().observe(this, Observer {
-            binding.editText.findCasper()
-        })
     }
 
 

@@ -1,17 +1,31 @@
 package com.example.myapplication.ui
 
 import android.content.Context
-import android.text.SpanWatcher
-import android.text.Spannable
-import android.text.SpannableStringBuilder
-import android.text.Spanned
+import android.text.*
 import android.util.AttributeSet
 import androidx.appcompat.widget.AppCompatEditText
+import androidx.core.widget.addTextChangedListener
 
 class CasperEditText @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = android.R.attr.editTextStyle
 ) : AppCompatEditText(context, attrs, defStyleAttr) {
 
+    init {
+        addTextChangedListener(object :TextWatcher{
+            override fun afterTextChanged(s: Editable?) {
+                findCasper()
+            }
+
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+                TODO("Not yet implemented")
+            }
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                TODO("Not yet implemented")
+            }
+
+        })
+    }
     /**
      * CharSequence 를 받아 Casper 문자에 Span 을 입힌다.
      */
@@ -37,6 +51,8 @@ class CasperEditText @JvmOverloads constructor(
         }
 
     }
+
+
 
     private val spanWatcher = object : SpanWatcher {
 

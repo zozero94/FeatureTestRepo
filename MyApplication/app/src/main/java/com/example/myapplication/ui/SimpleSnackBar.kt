@@ -9,7 +9,9 @@ import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.myapplication.R
+import com.example.myapplication.ui.SimpleSnackBar.Builder
 import com.google.android.material.snackbar.Snackbar
+import kotlinx.android.synthetic.main.snackbar.view.*
 
 /**
  *
@@ -26,22 +28,52 @@ import com.google.android.material.snackbar.Snackbar
  */
 
 
-class SimpleSnackBar private constructor(context: Context, pos: View, duration: Int, attributeSet: AttributeSet?, defStyleAttr: Int) : ConstraintLayout(context, attributeSet, defStyleAttr) {
+class SimpleSnackBar private constructor(
+    context: Context,
+    pos: View,
+    duration: Int,
+    attributeSet: AttributeSet?,
+    defStyleAttr: Int
+) : ConstraintLayout(context, attributeSet, defStyleAttr) {
     constructor(context: Context, pos: View, duration: Int) : this(context, pos, duration, null, 0)
-    constructor(context: Context, pos: View, duration: Int, attributeSet: AttributeSet?) : this(context, pos, duration, attributeSet, 0)
-    constructor(context: Context, pos: View, duration: Int, defStyleAttr: Int) : this(context, pos, duration, null, defStyleAttr)
+    constructor(context: Context, pos: View, duration: Int, attributeSet: AttributeSet?) : this(
+        context,
+        pos,
+        duration,
+        attributeSet,
+        0
+    )
+
+    constructor(context: Context, pos: View, duration: Int, defStyleAttr: Int) : this(
+        context,
+        pos,
+        duration,
+        null,
+        defStyleAttr
+    )
 
     private val snackBar: Snackbar = Snackbar.make(pos, "", duration)
 
     init {
         inflate(context, R.layout.snackbar, this)
         (snackBar.view as Snackbar.SnackbarLayout).apply {
-            findViewById<TextView>(com.google.android.material.R.id.snackbar_text).visibility = View.INVISIBLE
+            background = null
+            findViewById<TextView>(com.google.android.material.R.id.snackbar_text).visibility =
+                View.INVISIBLE
             setPadding(0, 0, 0, 0)
             alpha = 0.9f
         }.addView(this)
     }
 
+    fun text(@StringRes stringRes: Int): SimpleSnackBar {
+        snackText.text = context.resources.getString(stringRes)
+        return this
+    }
+
+    fun text(string: String): SimpleSnackBar {
+        snackText.text = string
+        return this
+    }
 
     fun background(@DrawableRes backgroundRes: Int): SimpleSnackBar {
         background = context.getDrawable(backgroundRes)

@@ -13,7 +13,6 @@ class TooltipView @JvmOverloads constructor(
 ) : AppCompatTextView(context, attributeSet, defStyleAttr) {
 
     init {
-        background = ContextCompat.getDrawable(context, R.drawable.kasper_bg_9)
         text = "캐스퍼입니다 까꿍~?"
 
     }
