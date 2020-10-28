@@ -1,12 +1,13 @@
 package com.example.myapplication.ui
 
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil.inflate
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.myapplication.R
 import com.example.myapplication.databinding.ActivityMainBinding
-import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity() {
 
@@ -17,6 +18,7 @@ class MainActivity : AppCompatActivity() {
         )
     }
 
+    private var kasperTooltipView: View? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,6 +31,14 @@ class MainActivity : AppCompatActivity() {
         binding.lifecycleOwner = this
         setContentView(binding.root)
 
+        viewModel.showKasperTooltipIfNeed()
+        viewModel.isShowToolTip().observe(this, Observer { isShow ->
+            if (isShow) {
+                kasperTooltipView = binding.kasperToolTip.viewStub?.inflate()
+            } else {
+                kasperTooltipView?.visibility = View.GONE
+            }
+        })
 
     }
 

@@ -11,7 +11,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.myapplication.R
 import com.example.myapplication.ui.SimpleSnackBar.Builder
 import com.google.android.material.snackbar.Snackbar
-import kotlinx.android.synthetic.main.snackbar.view.*
+import kotlinx.android.synthetic.main.kasper_tooltip.view.*
 
 /**
  *
@@ -55,7 +55,7 @@ class SimpleSnackBar private constructor(
     private val snackBar: Snackbar = Snackbar.make(pos, "", duration)
 
     init {
-        inflate(context, R.layout.snackbar, this)
+        inflate(context, R.layout.kasper_tooltip, this)
         (snackBar.view as Snackbar.SnackbarLayout).apply {
             background = null
             findViewById<TextView>(com.google.android.material.R.id.snackbar_text).visibility =
@@ -66,12 +66,12 @@ class SimpleSnackBar private constructor(
     }
 
     fun text(@StringRes stringRes: Int): SimpleSnackBar {
-        snackText.text = context.resources.getString(stringRes)
+        tooltip_text.text = context.resources.getString(stringRes)
         return this
     }
 
     fun text(string: String): SimpleSnackBar {
-        snackText.text = string
+        tooltip_text.text = string
         return this
     }
 
