@@ -2,11 +2,13 @@ package com.example.annotation_processor
 
 import com.example.annotation.ExampleAnnotation
 import com.google.auto.service.AutoService
+import com.squareup.javapoet.ClassName
 import com.squareup.javapoet.JavaFile
 import com.squareup.javapoet.MethodSpec
 import com.squareup.javapoet.TypeSpec
 import java.io.IOException
 import javax.annotation.processing.AbstractProcessor
+import javax.annotation.processing.ProcessingEnvironment
 import javax.annotation.processing.Processor
 import javax.annotation.processing.RoundEnvironment
 import javax.lang.model.SourceVersion
@@ -19,10 +21,15 @@ import javax.tools.Diagnostic
 
 @AutoService(Processor::class)
 class TestProcessor : AbstractProcessor() {
+    private val contextClass = ClassName.get("android.content", "Context")
 
     private val spec = mutableListOf<MethodSpec?>()
     private var packageName: String? = null
 
+    override fun init(p0: ProcessingEnvironment?) {
+        super.init(p0)
+        println("init")
+    }
 
     override fun process(
         annotations: MutableSet<out TypeElement>?,
@@ -38,7 +45,7 @@ class TestProcessor : AbstractProcessor() {
                 }
                 packageName = e.qualifiedName.toString()
             }
-            if (element.kind !== ElementKind.CLASS) {
+            if (element.kind != ElementKind.CLASS) {
                 processingEnv.messager
                     .printMessage(Diagnostic.Kind.ERROR, "에러에러에러 존나 에러!!!!")
                 return false
@@ -57,7 +64,7 @@ class TestProcessor : AbstractProcessor() {
     }
 
     override fun getSupportedAnnotationTypes(): MutableSet<String> =
-        mutableSetOf(ExampleAnnotation::class.java.name)
+        mutableSetOf(ExampleAnnotation::class.java.canonicalName)
 
     override fun getSupportedSourceVersion(): SourceVersion = SourceVersion.latestSupported()
 
@@ -66,7 +73,7 @@ class TestProcessor : AbstractProcessor() {
         return MethodSpec
             .methodBuilder("Zero" + element.simpleName)
             .addModifiers(Modifier.PUBLIC)
-            .addParameter(String.javaClass, "data")
+            .addParameter(contextClass, "context")
             .addStatement("//으에에엥??")
             .build()
     }
@@ -76,7 +83,7 @@ class TestProcessor : AbstractProcessor() {
         println("methodSpecList Count = " + methodSpecList.size)
         val builder = TypeSpec.classBuilder("Zero")
         builder.addModifiers(
-            Modifier.PUBLIC
+            Modifier.PUBLIC, Modifier.FINAL
         )
         for (methodSpec in methodSpecList) {
             builder.addMethod(methodSpec)

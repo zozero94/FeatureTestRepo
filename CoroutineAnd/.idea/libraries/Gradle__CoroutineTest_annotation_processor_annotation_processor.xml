@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="Gradle: CoroutineTest.annotation_processor.annotation_processor">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/annotation_processor/build/libs/annotation_processor.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
