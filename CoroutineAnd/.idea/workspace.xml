@@ -10,14 +10,29 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
     <option name="TOOL_WINDOW_REGEXP_FILTER" value="false" />
   </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="f2b9e80c-69ac-458a-8eb6-1823c2b10d00" name="Default Changelist" comment="" />
+    <list default="true" id="f2b9e80c-69ac-458a-8eb6-1823c2b10d00" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../MyApplication/data/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyApplication/data/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyApplication/data/consumer-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyApplication/data/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyApplication/data/src/androidTest/java/com/example/data/ExampleInstrumentedTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyApplication/data/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyApplication/data/src/test/java/com/example/data/ExampleUnitTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyApplication/domain/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyApplication/domain/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyApplication/domain/src/main/java/com/example/domain/MyClass.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyApplication/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../MyApplication/settings.gradle" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="R39N30284EY" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[R39N30284EY]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -100,7 +115,6 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -113,7 +127,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
@@ -133,12 +147,13 @@
       </method>
     </configuration>
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
-      <module name="app" />
+      <module name="CoroutineTest.app" />
       <option name="DEPLOY" value="true" />
       <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
       <option name="DEPLOY_AS_INSTANT" value="false" />
       <option name="ARTIFACT_NAME" value="" />
       <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
       <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
       <option name="ACTIVITY_EXTRA_FLAGS" value="" />
       <option name="MODE" value="default_activity" />
@@ -174,11 +189,16 @@
       </Native>
       <Profilers>
         <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
         <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
         <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
       </Profilers>
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
       <method v="2">
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
@@ -238,14 +258,10 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="654" y="52" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1596359271078" />
-    <state x="644" y="219" width="507" height="681" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1595147054998">
-      <screen x="0" y="0" width="1792" height="1120" />
+    <state x="2495" y="437" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1604378731763">
+      <screen x="1792" y="0" width="1920" height="1080" />
     </state>
-    <state x="644" y="219" width="507" height="681" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1595147054998" />
-    <state x="484" y="322" key="AndroidCreateResourceFileDialog" timestamp="1595074304522">
-      <screen x="0" y="0" width="1792" height="1120" />
-    </state>
-    <state x="484" y="322" key="AndroidCreateResourceFileDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1595074304522" />
+    <state x="2495" y="437" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/-1920.0.1920.1080/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1604378731763" />
     <state width="627" height="466" key="DebuggerActiveHint" timestamp="1596359753360">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
@@ -255,24 +271,28 @@
     </state>
     <state x="100" y="57" width="1592" height="960" key="DiffContextDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1596355069824" />
     <state x="100" y="57" width="1592" height="960" key="DiffContextDialog/0.23.1792.1097@0.23.1792.1097" timestamp="1596363342106" />
-    <state width="1750" height="369" key="GridCell.Tab.0.bottom" timestamp="1602582437636">
-      <screen x="0" y="0" width="1792" height="1120" />
+    <state width="1878" height="350" key="GridCell.Tab.0.bottom" timestamp="1604377991039">
+      <screen x="1792" y="0" width="1920" height="1080" />
     </state>
+    <state width="1878" height="350" key="GridCell.Tab.0.bottom/-1920.0.1920.1080/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1604377991039" />
     <state width="1750" height="369" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1602582437636" />
     <state width="1750" height="318" key="GridCell.Tab.0.bottom/0.23.1792.1097@0.23.1792.1097" timestamp="1596358596345" />
-    <state width="1750" height="369" key="GridCell.Tab.0.center" timestamp="1602582437635">
-      <screen x="0" y="0" width="1792" height="1120" />
+    <state width="1878" height="350" key="GridCell.Tab.0.center" timestamp="1604377991036">
+      <screen x="1792" y="0" width="1920" height="1080" />
     </state>
+    <state width="1878" height="350" key="GridCell.Tab.0.center/-1920.0.1920.1080/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1604377991036" />
     <state width="1750" height="369" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1602582437635" />
     <state width="1750" height="318" key="GridCell.Tab.0.center/0.23.1792.1097@0.23.1792.1097" timestamp="1596358596342" />
-    <state width="1750" height="369" key="GridCell.Tab.0.left" timestamp="1602582437634">
-      <screen x="0" y="0" width="1792" height="1120" />
+    <state width="1878" height="350" key="GridCell.Tab.0.left" timestamp="1604377991033">
+      <screen x="1792" y="0" width="1920" height="1080" />
     </state>
+    <state width="1878" height="350" key="GridCell.Tab.0.left/-1920.0.1920.1080/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1604377991033" />
     <state width="1750" height="369" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1602582437634" />
     <state width="1750" height="318" key="GridCell.Tab.0.left/0.23.1792.1097@0.23.1792.1097" timestamp="1596358596342" />
-    <state width="1750" height="369" key="GridCell.Tab.0.right" timestamp="1602582437635">
-      <screen x="0" y="0" width="1792" height="1120" />
+    <state width="1878" height="350" key="GridCell.Tab.0.right" timestamp="1604377991038">
+      <screen x="1792" y="0" width="1920" height="1080" />
     </state>
+    <state width="1878" height="350" key="GridCell.Tab.0.right/-1920.0.1920.1080/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1604377991038" />
     <state width="1750" height="369" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1602582437635" />
     <state width="1750" height="318" key="GridCell.Tab.0.right/0.23.1792.1097@0.23.1792.1097" timestamp="1596358596343" />
     <state width="1750" height="391" key="GridCell.Tab.1.bottom" timestamp="1602582302601">
@@ -291,9 +311,10 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state width="1750" height="391" key="GridCell.Tab.1.right/0.0.1792.1120@0.0.1792.1120" timestamp="1602582302601" />
-    <state x="397" y="199" key="SettingsEditor" timestamp="1602582988101">
-      <screen x="0" y="0" width="1792" height="1120" />
+    <state x="2217" y="192" key="SettingsEditor" timestamp="1604378748685">
+      <screen x="1792" y="0" width="1920" height="1080" />
     </state>
+    <state x="2217" y="192" key="SettingsEditor/-1920.0.1920.1080/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1604378748685" />
     <state x="397" y="199" key="SettingsEditor/0.0.1792.1120@0.0.1792.1120" timestamp="1602582988101" />
     <state x="548" y="317" width="875" height="486" key="find.popup" timestamp="1602582906638">
       <screen x="0" y="0" width="1792" height="1120" />

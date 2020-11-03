@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/CoroutineTest.iml" filepath="$PROJECT_DIR$/.idea/modules/CoroutineTest.iml" group="CoroutineTest" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/annotation/annotation.iml" filepath="$PROJECT_DIR$/.idea/modules/annotation/annotation.iml" group="CoroutineTest/annotation" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/annotation_processor/annotation_processor.iml" filepath="$PROJECT_DIR$/.idea/modules/annotation_processor/annotation_processor.iml" group="CoroutineTest/annotation_processor" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="CoroutineTest/app" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/data/data.iml" filepath="$PROJECT_DIR$/.idea/modules/data/data.iml" group="CoroutineTest/data" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/domain/domain.iml" filepath="$PROJECT_DIR$/.idea/modules/domain/domain.iml" group="CoroutineTest/domain" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/CoroutineTest.iml" filepath="$PROJECT_DIR$/.idea/modules/CoroutineTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/annotation/CoroutineTest.annotation.iml" filepath="$PROJECT_DIR$/.idea/modules/annotation/CoroutineTest.annotation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/annotation_processor/CoroutineTest.annotation_processor.iml" filepath="$PROJECT_DIR$/.idea/modules/annotation_processor/CoroutineTest.annotation_processor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/CoroutineTest.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/CoroutineTest.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/data/CoroutineTest.data.iml" filepath="$PROJECT_DIR$/.idea/modules/data/CoroutineTest.data.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/domain/CoroutineTest.domain.iml" filepath="$PROJECT_DIR$/.idea/modules/domain/CoroutineTest.domain.iml" />
     </modules>
   </component>
 </project>
