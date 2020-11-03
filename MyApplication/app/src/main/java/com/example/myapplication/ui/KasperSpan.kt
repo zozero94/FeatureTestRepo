@@ -9,7 +9,7 @@ import androidx.core.content.ContextCompat
 import com.example.myapplication.R
 
 class KasperSpan(
-    val context: Context,
+    private val context: Context,
     val kasperCommand: String
 ) : ClickableSpan() {
 
