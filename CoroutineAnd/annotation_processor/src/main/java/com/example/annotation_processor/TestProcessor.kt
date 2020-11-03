@@ -1,7 +1,6 @@
 package com.example.annotation_processor
 
 import com.example.annotation.ExampleAnnotation
-import com.google.auto.service.AutoService
 import com.squareup.javapoet.ClassName
 import com.squareup.javapoet.JavaFile
 import com.squareup.javapoet.MethodSpec
@@ -9,7 +8,6 @@ import com.squareup.javapoet.TypeSpec
 import java.io.IOException
 import javax.annotation.processing.AbstractProcessor
 import javax.annotation.processing.ProcessingEnvironment
-import javax.annotation.processing.Processor
 import javax.annotation.processing.RoundEnvironment
 import javax.lang.model.SourceVersion
 import javax.lang.model.element.ElementKind
@@ -19,7 +17,6 @@ import javax.lang.model.element.TypeElement
 import javax.tools.Diagnostic
 
 
-@AutoService(Processor::class)
 class TestProcessor : AbstractProcessor() {
     private val contextClass = ClassName.get("android.content", "Context")
 

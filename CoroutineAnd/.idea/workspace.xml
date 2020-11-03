@@ -13,6 +13,24 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="NONE" />
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="f2b9e80c-69ac-458a-8eb6-1823c2b10d00" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -230,6 +248,17 @@
     </task>
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
     <state x="421" y="299" key="#PSD" timestamp="1602580257246">
       <screen x="0" y="0" width="1792" height="1120" />
@@ -314,10 +343,10 @@
       <screen x="1792" y="0" width="1920" height="1080" />
     </state>
     <state x="2482" y="290" width="540" height="524" key="StructurePopup/-1920.23.1920.1057/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1604381361522" />
-    <state x="2118" y="306" width="1300" height="702" key="find.popup" timestamp="1604383399463">
+    <state x="2118" y="306" width="1300" height="702" key="find.popup" timestamp="1604384382105">
       <screen x="1792" y="0" width="1920" height="1080" />
     </state>
-    <state x="2118" y="306" width="1300" height="702" key="find.popup/-1920.0.1920.1080/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1604383399463" />
+    <state x="2118" y="306" width="1300" height="702" key="find.popup/-1920.0.1920.1080/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1604384382105" />
     <state x="2379" y="306" width="938" height="490" key="find.popup/-1920.23.1920.1057/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1604381263756" />
     <state x="548" y="317" width="875" height="486" key="find.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1602582906638" />
     <state x="352" y="293" width="700" height="1053" key="recent.locations.popup" timestamp="1602580728457">
@@ -332,10 +361,10 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="561" y="265" width="670" height="675" key="run.anything.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1596358016119" />
-    <state x="2393" y="242" width="718" height="652" key="search.everywhere.popup" timestamp="1604381863454">
+    <state x="2393" y="242" width="718" height="652" key="search.everywhere.popup" timestamp="1604384341999">
       <screen x="1792" y="0" width="1920" height="1080" />
     </state>
-    <state x="2393" y="242" width="718" height="652" key="search.everywhere.popup/-1920.0.1920.1080/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1604381863454" />
+    <state x="2393" y="242" width="718" height="652" key="search.everywhere.popup/-1920.0.1920.1080/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1604384341999" />
     <state x="561" y="251" width="670" height="676" key="search.everywhere.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1602582984073" />
   </component>
   <component name="XDebuggerManager">

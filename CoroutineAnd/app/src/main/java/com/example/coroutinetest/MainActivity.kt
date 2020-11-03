@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         binding.vm = viewModel
 
         recyclerView.adapter = adapter
-
+        Zero().ZeroMainActivity(applicationContext)
         button.setOnClickListener {
             Toast.makeText(this, "눌림", Toast.LENGTH_SHORT).show()
             viewModel.requestApi()
