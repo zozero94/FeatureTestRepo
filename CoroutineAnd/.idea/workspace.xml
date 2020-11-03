@@ -14,19 +14,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f2b9e80c-69ac-458a-8eb6-1823c2b10d00" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../MyApplication/data/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MyApplication/data/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MyApplication/data/consumer-rules.pro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MyApplication/data/proguard-rules.pro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MyApplication/data/src/androidTest/java/com/example/data/ExampleInstrumentedTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MyApplication/data/src/main/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MyApplication/data/src/test/java/com/example/data/ExampleUnitTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MyApplication/domain/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MyApplication/domain/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MyApplication/domain/src/main/java/com/example/domain/MyClass.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyApplication/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../MyApplication/settings.gradle" afterDir="false" />
-    </list>
+    <list default="true" id="f2b9e80c-69ac-458a-8eb6-1823c2b10d00" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -271,28 +259,32 @@
     </state>
     <state x="100" y="57" width="1592" height="960" key="DiffContextDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1596355069824" />
     <state x="100" y="57" width="1592" height="960" key="DiffContextDialog/0.23.1792.1097@0.23.1792.1097" timestamp="1596363342106" />
-    <state width="1878" height="350" key="GridCell.Tab.0.bottom" timestamp="1604377991039">
+    <state width="1878" height="393" key="GridCell.Tab.0.bottom" timestamp="1604381104862">
       <screen x="1792" y="0" width="1920" height="1080" />
     </state>
     <state width="1878" height="350" key="GridCell.Tab.0.bottom/-1920.0.1920.1080/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1604377991039" />
+    <state width="1878" height="393" key="GridCell.Tab.0.bottom/-1920.23.1920.1057/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1604381104862" />
     <state width="1750" height="369" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1602582437636" />
     <state width="1750" height="318" key="GridCell.Tab.0.bottom/0.23.1792.1097@0.23.1792.1097" timestamp="1596358596345" />
-    <state width="1878" height="350" key="GridCell.Tab.0.center" timestamp="1604377991036">
+    <state width="1878" height="393" key="GridCell.Tab.0.center" timestamp="1604381104860">
       <screen x="1792" y="0" width="1920" height="1080" />
     </state>
     <state width="1878" height="350" key="GridCell.Tab.0.center/-1920.0.1920.1080/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1604377991036" />
+    <state width="1878" height="393" key="GridCell.Tab.0.center/-1920.23.1920.1057/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1604381104860" />
     <state width="1750" height="369" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1602582437635" />
     <state width="1750" height="318" key="GridCell.Tab.0.center/0.23.1792.1097@0.23.1792.1097" timestamp="1596358596342" />
-    <state width="1878" height="350" key="GridCell.Tab.0.left" timestamp="1604377991033">
+    <state width="1878" height="393" key="GridCell.Tab.0.left" timestamp="1604381104858">
       <screen x="1792" y="0" width="1920" height="1080" />
     </state>
     <state width="1878" height="350" key="GridCell.Tab.0.left/-1920.0.1920.1080/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1604377991033" />
+    <state width="1878" height="393" key="GridCell.Tab.0.left/-1920.23.1920.1057/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1604381104858" />
     <state width="1750" height="369" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1602582437634" />
     <state width="1750" height="318" key="GridCell.Tab.0.left/0.23.1792.1097@0.23.1792.1097" timestamp="1596358596342" />
-    <state width="1878" height="350" key="GridCell.Tab.0.right" timestamp="1604377991038">
+    <state width="1878" height="393" key="GridCell.Tab.0.right" timestamp="1604381104861">
       <screen x="1792" y="0" width="1920" height="1080" />
     </state>
     <state width="1878" height="350" key="GridCell.Tab.0.right/-1920.0.1920.1080/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1604377991038" />
+    <state width="1878" height="393" key="GridCell.Tab.0.right/-1920.23.1920.1057/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1604381104861" />
     <state width="1750" height="369" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1602582437635" />
     <state width="1750" height="318" key="GridCell.Tab.0.right/0.23.1792.1097@0.23.1792.1097" timestamp="1596358596343" />
     <state width="1750" height="391" key="GridCell.Tab.1.bottom" timestamp="1602582302601">
@@ -316,9 +308,10 @@
     </state>
     <state x="2217" y="192" key="SettingsEditor/-1920.0.1920.1080/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1604378748685" />
     <state x="397" y="199" key="SettingsEditor/0.0.1792.1120@0.0.1792.1120" timestamp="1602582988101" />
-    <state x="548" y="317" width="875" height="486" key="find.popup" timestamp="1602582906638">
-      <screen x="0" y="0" width="1792" height="1120" />
+    <state x="2379" y="306" width="938" height="490" key="find.popup" timestamp="1604380638242">
+      <screen x="1792" y="0" width="1920" height="1080" />
     </state>
+    <state x="2379" y="306" width="938" height="490" key="find.popup/-1920.0.1920.1080/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1604380638242" />
     <state x="548" y="317" width="875" height="486" key="find.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1602582906638" />
     <state x="352" y="293" width="700" height="1053" key="recent.locations.popup" timestamp="1602580728457">
       <screen x="0" y="0" width="1792" height="1120" />
@@ -338,15 +331,6 @@
     <state x="561" y="251" width="670" height="676" key="search.everywhere.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1602582984073" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/annotation_processor/src/main/java/com/example/annotation_processor/TestProcessor.kt</url>
-          <line>32</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="app">
         <watch expression="defaultViewModelProviderFactory" language="kotlin" />

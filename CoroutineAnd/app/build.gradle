@@ -32,8 +32,8 @@ android {
     kotlinOptions {
         jvmTarget = JavaVersion.VERSION_1_8
     }
-    dataBinding {
-        enabled = true
+    buildFeatures {
+        dataBinding = true
     }
 }
 
@@ -42,7 +42,7 @@ dependencies {
     implementation project(':data')
     implementation project(':domain')
     implementation project(':annotation')
-    annotationProcessor project(':annotation_processor')
+    implementation project(':annotation_processor')
 
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"

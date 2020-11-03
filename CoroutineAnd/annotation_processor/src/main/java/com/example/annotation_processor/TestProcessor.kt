@@ -28,7 +28,7 @@ class TestProcessor : AbstractProcessor() {
         annotations: MutableSet<out TypeElement>?,
         roundEnv: RoundEnvironment
     ): Boolean {
-        System.out.println("프로세싱!!!")
+        println("asdasdasdasdasdasda")
         val elements = roundEnv.getElementsAnnotatedWith(ExampleAnnotation::class.java)
         elements.forEach { element ->
             if (packageName == null) {
