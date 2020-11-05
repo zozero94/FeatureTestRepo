@@ -3,34 +3,26 @@ package com.example.myapplication.ui
 import android.os.Bundle
 import android.view.View
 import androidx.activity.viewModels
-import androidx.appcompat.app.AppCompatActivity
-import androidx.databinding.DataBindingUtil.inflate
 import androidx.lifecycle.Observer
-import com.example.myapplication.R
+import com.example.myapplication.R.layout
 import com.example.myapplication.databinding.ActivityMainBinding
+import com.example.myapplication.ui.base.BaseActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity<ActivityMainBinding>() {
+    override val layoutId: Int = layout.activity_main
 
-    private lateinit var binding: ActivityMainBinding
+    private val mainViewModel by viewModels<MainViewModel>()
 
-    private val viewModel by viewModels<MainViewModel>()
     private var kasperTooltipView: View? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        binding = inflate(
-            layoutInflater,
-            R.layout.activity_main, null, false
-        )
-        binding.viewModel = this.viewModel
-        binding.lifecycleOwner = this
-        setContentView(binding.root)
+        binding.viewModel = mainViewModel
 
-        viewModel.showKasperTooltipIfNeed()
-        viewModel.isShowToolTip().observe(this, Observer { isShow ->
+        mainViewModel.showKasperTooltipIfNeed()
+        mainViewModel.isShowToolTip().observe(this, Observer { isShow ->
             if (isShow) {
                 kasperTooltipView = binding.kasperToolTip.viewStub?.inflate()
             } else {

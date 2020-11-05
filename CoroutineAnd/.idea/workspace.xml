@@ -33,7 +33,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f2b9e80c-69ac-458a-8eb6-1823c2b10d00" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../MyApplication/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../MyApplication/app/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyApplication/app/src/main/java/com/example/myapplication/ui/base/BaseActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyApplication/app/src/main/java/com/example/myapplication/util/ViewUtil.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MyApplication/app/src/main/java/com/example/myapplication/ui/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../MyApplication/app/src/main/java/com/example/myapplication/ui/MainActivity.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -719,11 +720,11 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="561" y="265" width="670" height="675" key="run.anything.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1596358016119" />
-    <state x="2393" y="242" width="718" height="652" key="search.everywhere.popup" timestamp="1604384341999">
-      <screen x="1792" y="0" width="1920" height="1080" />
+    <state x="561" y="251" width="670" height="676" key="search.everywhere.popup" timestamp="1604568121005">
+      <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="2393" y="242" width="718" height="652" key="search.everywhere.popup/-1920.0.1920.1080/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1604384341999" />
-    <state x="561" y="251" width="670" height="676" key="search.everywhere.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1602582984073" />
+    <state x="561" y="251" width="670" height="676" key="search.everywhere.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1604568121005" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
