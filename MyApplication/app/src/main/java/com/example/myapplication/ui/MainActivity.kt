@@ -3,7 +3,6 @@ package com.example.myapplication.ui
 import android.os.Bundle
 import android.view.View
 import androidx.activity.viewModels
-import androidx.lifecycle.Observer
 import com.example.myapplication.R.layout
 import com.example.myapplication.databinding.ActivityMainBinding
 import com.example.myapplication.ui.base.BaseActivity
@@ -22,7 +21,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         binding.viewModel = mainViewModel
 
         mainViewModel.showKasperTooltipIfNeed()
-        mainViewModel.isShowToolTip().observe(this, Observer { isShow ->
+        mainViewModel.isShowToolTip().observe(this, { isShow ->
             if (isShow) {
                 kasperTooltipView = binding.kasperToolTip.viewStub?.inflate()
             } else {
