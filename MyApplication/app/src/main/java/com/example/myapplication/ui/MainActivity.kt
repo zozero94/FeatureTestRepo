@@ -2,10 +2,10 @@ package com.example.myapplication.ui
 
 import android.os.Bundle
 import android.view.View
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil.inflate
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import com.example.myapplication.R
 import com.example.myapplication.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -14,12 +14,8 @@ import dagger.hilt.android.AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-    private val viewModel by lazy {
-        ViewModelProvider(this, ViewModelProvider.AndroidViewModelFactory(application)).get(
-            MainViewModel::class.java
-        )
-    }
 
+    private val viewModel by viewModels<MainViewModel>()
     private var kasperTooltipView: View? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {

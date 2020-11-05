@@ -33,13 +33,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f2b9e80c-69ac-458a-8eb6-1823c2b10d00" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../MyApplication/app/src/main/java/com/example/myapplication/TestApp.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyApplication/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MyApplication/.idea/codeStyles/Project.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MyApplication/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../MyApplication/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyApplication/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MyApplication/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MyApplication/app/src/main/java/com/example/myapplication/ui/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../MyApplication/app/src/main/java/com/example/myapplication/ui/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyApplication/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../MyApplication/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyApplication/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../MyApplication/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

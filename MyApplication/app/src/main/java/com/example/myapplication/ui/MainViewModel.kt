@@ -2,6 +2,7 @@ package com.example.myapplication.ui
 
 import android.text.Editable
 import android.text.TextWatcher
+import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -12,7 +13,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import java.util.concurrent.TimeUnit
 
-class MainViewModel : ViewModel() {
+class MainViewModel @ViewModelInject constructor() : ViewModel() {
     private val _showToolTip = MutableLiveData<Boolean>()
     fun isShowToolTip(): LiveData<Boolean> = _showToolTip
 
