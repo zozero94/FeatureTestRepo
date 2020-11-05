@@ -1,7 +1,6 @@
-package com.example.myapplication.ui
+package com.example.myapplication.ui.main
 
 import android.os.Bundle
-import android.view.View
 import androidx.activity.viewModels
 import com.example.myapplication.R.layout
 import com.example.myapplication.databinding.ActivityMainBinding
@@ -14,22 +13,22 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
 
     private val mainViewModel by viewModels<MainViewModel>()
 
-    private var kasperTooltipView: View? = null
+    private val adapter by lazy {
+        MainAdapter { type ->
+            when (type) {
+                is TestType.KasperTest -> {
+                    startActivity(type.intent)
+                }
+            }
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding.viewModel = mainViewModel
-
-        mainViewModel.showKasperTooltipIfNeed()
-        mainViewModel.isShowToolTip().observe(this, { isShow ->
-            if (isShow) {
-                kasperTooltipView = binding.kasperToolTip.viewStub?.inflate()
-            } else {
-                kasperTooltipView?.visibility = View.GONE
-            }
-        })
-
+        binding.mainContent.adapter = adapter
     }
 
 
 }
+

@@ -1,4 +1,4 @@
-package com.example.myapplication.ui
+package com.example.myapplication.ui.kasper
 
 import android.text.Editable
 import android.text.TextWatcher
@@ -13,10 +13,9 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import java.util.concurrent.TimeUnit
 
-class MainViewModel @ViewModelInject constructor() : ViewModel() {
+class KasperViewModel @ViewModelInject constructor() : ViewModel() {
     private val _showToolTip = MutableLiveData<Boolean>()
     fun isShowToolTip(): LiveData<Boolean> = _showToolTip
-
 
     private val inputTextRelay = BehaviorRelay.create<CharSequence>()
     val watcher = object : TextWatcher {
