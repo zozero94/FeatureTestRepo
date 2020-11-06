@@ -84,6 +84,7 @@ class KasperEditText @JvmOverloads constructor(
             kasperCommand.length,
             kasperCommand
         ) // replace 하면서, addTextChangedListener 가 다시 불림
+        setSelection(curText.length)
     }
 
 
