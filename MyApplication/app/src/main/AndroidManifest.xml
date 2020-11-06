@@ -21,6 +21,10 @@
         <activity android:name=".ui.kasper.KasperActivity">
 
         </activity>
+
+        <activity android:name=".ui.dictation.DictationActivity">
+
+        </activity>
     </application>
 
 </manifest>
