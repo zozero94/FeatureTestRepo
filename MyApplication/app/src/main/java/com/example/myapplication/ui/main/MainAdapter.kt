@@ -35,5 +35,6 @@ class MainAdapter(var onClick: ((TestType) -> Unit)? = null) :
         fun bind(text: String) {
             containerView.button.text = text
         }
+
     }
 }

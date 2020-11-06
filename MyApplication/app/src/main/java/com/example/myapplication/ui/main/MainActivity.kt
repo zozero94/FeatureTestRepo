@@ -27,6 +27,10 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         super.onCreate(savedInstanceState)
         binding.viewModel = mainViewModel
         binding.mainContent.adapter = adapter
+
+        mainViewModel.getItemList().observe(this, {
+            adapter.replaceItems(it)
+        })
     }
 
 
