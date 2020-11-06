@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.viewModels
+import com.example.myapplication.R
 import com.example.myapplication.R.layout
 import com.example.myapplication.databinding.ActivityDictationBinding
 import com.example.myapplication.ui.base.BaseActivity
@@ -19,6 +20,7 @@ class DictationActivity : BaseActivity<ActivityDictationBinding>() {
         binding.textView.setTextSelectListener {
             toast(this, it.toString())
         }
+        dictationViewModel.setText(getString(R.string.long_text))
         dictationViewModel.getDictationText().observe(this, {
             binding.textView.setMainContent(it)
         })
