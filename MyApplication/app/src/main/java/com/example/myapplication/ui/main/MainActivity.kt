@@ -15,11 +15,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
 
     private val adapter by lazy {
         MainAdapter { type ->
-            when (type) {
-                is TestType.KasperTest -> {
-                    startActivity(type.intent)
-                }
-            }
+            startActivity(type.intent)
         }
     }
 
