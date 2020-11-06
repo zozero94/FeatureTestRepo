@@ -1,5 +1,6 @@
 package com.example.myapplication.ui.main
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,7 +10,7 @@ import kotlinx.android.extensions.LayoutContainer
 import kotlinx.android.synthetic.main.list_item_main.view.*
 import java.util.*
 
-class MainAdapter(var onClick: ((TestType) -> Unit)? = null) :
+class MainAdapter(var onClick: ((Intent?) -> Unit)? = null) :
     RecyclerView.Adapter<MainAdapter.MainViewHolder>() {
     private val itemList = LinkedList<TestType>()
 
@@ -22,7 +23,7 @@ class MainAdapter(var onClick: ((TestType) -> Unit)? = null) :
         MainViewHolder(
             LayoutInflater.from(parent.context).inflate(R.layout.list_item_main, parent, false)
         ).apply {
-            itemView.setOnClickListener { onClick?.invoke(itemList[adapterPosition]) }
+            itemView.setOnClickListener { onClick?.invoke(itemList[adapterPosition].intent) }
         }
 
     override fun onBindViewHolder(holder: MainViewHolder, position: Int) =
