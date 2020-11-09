@@ -29,7 +29,8 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         mainViewModel.setTestItems(
             listOf(
                 TestType.KasperTest(KasperActivity.newIntent(this), "Kasper"),
-                TestType.DictationTest(DictationActivity.newIntent(this), "Dictation")
+                TestType.DictationTest(DictationActivity.newIntent(this), "Dictation"),
+                TestType.AlarmPicker(null, "AlarmPicker")
             )
         )
 

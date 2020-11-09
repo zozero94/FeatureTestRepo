@@ -7,11 +7,11 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 sealed class TestType(var intent: Intent? = null, val text: String) {
-    class KasperTest(intent: Intent? = null, text: String) :
-        TestType(intent, text)
+    class KasperTest(intent: Intent? = null, text: String) : TestType(intent, text)
 
-    class DictationTest(intent: Intent? = null, text: String) :
-        TestType(intent, text)
+    class DictationTest(intent: Intent? = null, text: String) : TestType(intent, text)
+
+    class AlarmPicker(intent: Intent? = null, text: String) : TestType(intent, text)
 }
 
 class MainViewModel @ViewModelInject constructor() :
