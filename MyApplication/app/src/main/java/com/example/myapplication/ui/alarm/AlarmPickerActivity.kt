@@ -44,7 +44,7 @@ class AlarmPickerActivity : BaseActivity<ActivityAlarmPickerBinding>() {
     @SuppressLint("ClickableViewAccessibility")
     private fun setDragDetectListener() {
         var previousDay: TextView? = null
-        weekWrapper.setOnTouchListener { _, event ->
+        dayWrapper.setOnTouchListener { _, event ->
             when (event?.action) {
                 MotionEvent.ACTION_DOWN -> {
                     previousDay = null
