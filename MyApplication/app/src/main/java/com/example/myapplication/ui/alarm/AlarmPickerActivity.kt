@@ -33,11 +33,9 @@ class AlarmPickerActivity : BaseActivity<ActivityAlarmPickerBinding>() {
     private fun isAccessibilityMode() =
         ((getSystemService(Context.ACCESSIBILITY_SERVICE) as AccessibilityManager).isEnabled)
 
-    private fun List<TextView>.setClickListenersOnDays() {
-        forEach {
-            it.setOnClickListener { clickedView ->
-                onChangeDaySelected(clickedView as TextView)
-            }
+    private fun List<TextView>.setClickListenersOnDays() = forEach { day ->
+        day.setOnClickListener { clickedView ->
+            onChangeDaySelected(clickedView as TextView)
         }
     }
 
@@ -52,7 +50,8 @@ class AlarmPickerActivity : BaseActivity<ActivityAlarmPickerBinding>() {
 
                 MotionEvent.ACTION_MOVE -> {
                     val day =
-                        getSelectedDayByPosition(event.rawX, event.rawY) ?: return@setOnTouchListener false
+                        getSelectedDayByPosition(event.rawX, event.rawY)
+                            ?: return@setOnTouchListener false
                     if (previousDay != day) {
                         onChangeDaySelected(day)
                         previousDay = day
