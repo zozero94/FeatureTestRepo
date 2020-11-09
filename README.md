@@ -1,5 +1,6 @@
 # FeatureTestRepo
-학습 기록
+학습 기록  
+[ISSUE](https://github.com/zojae031/FeatureTestRepo/issues?q=is%3Aissue+is%3Aclosed) 별로 피쳐 정리
 
 # [CoroutineAnd](https://github.com/zojae031/FeatureTestRepo/tree/master/CoroutineAnd)
 개인 학습용도 (신기술, 멀티모듈 등등)
