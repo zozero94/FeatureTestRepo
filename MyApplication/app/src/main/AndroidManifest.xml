@@ -25,6 +25,9 @@
         <activity android:name=".ui.dictation.DictationActivity">
 
         </activity>
+        <activity android:name=".ui.alarm.AlarmPickerActivity">
+
+        </activity>
     </application>
 
 </manifest>
