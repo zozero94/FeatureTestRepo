@@ -28,6 +28,10 @@
         <activity android:name=".ui.alarm.AlarmPickerActivity">
 
         </activity>
+
+        <activity android:name=".ui.mediapipe.MediaPipeActivity">
+
+        </activity>
     </application>
 
 </manifest>
