@@ -8,6 +8,7 @@ import com.example.myapplication.ui.alarm.AlarmPickerActivity
 import com.example.myapplication.ui.base.BaseActivity
 import com.example.myapplication.ui.dictation.DictationActivity
 import com.example.myapplication.ui.kasper.KasperActivity
+import com.example.myapplication.ui.mediapipe.MediaPipeActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -31,7 +32,8 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
             listOf(
                 TestType.KasperTest(KasperActivity.newIntent(this), "Kasper"),
                 TestType.DictationTest(DictationActivity.newIntent(this), "Dictation"),
-                TestType.AlarmPicker(AlarmPickerActivity.newIntent(this), "AlarmPicker")
+                TestType.AlarmPicker(AlarmPickerActivity.newIntent(this), "AlarmPicker"),
+                TestType.MediaPipe(MediaPipeActivity.newIntent(this), "MediaPipe")
             )
         )
 
