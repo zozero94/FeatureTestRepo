@@ -42,7 +42,7 @@ dependencies {
     implementation project(':data')
     implementation project(':domain')
 
-    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 
     implementation 'androidx.appcompat:appcompat:1.2.0'
@@ -112,5 +112,15 @@ dependencies {
     // CameraX View class
     implementation "androidx.camera:camera-view:1.0.0-alpha19"
     implementation "androidx.camera:camera-extensions:1.0.0-alpha19"
+
+    /**
+     * MediaPipe
+     */
+    implementation 'com.google.flogger:flogger:0.3.1'
+    implementation 'com.google.flogger:flogger-system-backend:0.3.1'
+    implementation 'com.google.code.findbugs:jsr305:3.0.2'
+    implementation 'com.google.guava:guava:27.0.1-android'
+    implementation 'com.google.guava:guava:27.0.1-android'
+    implementation 'com.google.protobuf:protobuf-java:3.11.4'
 
 }
