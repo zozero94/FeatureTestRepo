@@ -4,7 +4,6 @@ import android.content.Context
 import android.content.Intent
 import android.graphics.SurfaceTexture
 import android.os.Bundle
-import android.util.Size
 import android.view.SurfaceHolder
 import android.view.SurfaceView
 import android.view.View
@@ -97,20 +96,11 @@ class MediaPipeActivity : BaseActivity<ActivityMediapipeBinding>() {
                         width: Int,
                         height: Int
                     ) {
-                        // (Re-)Compute the ideal size of the camera-preview display (the area that the
-                        // camera-preview frames get rendered onto, potentially with scaling and rotation)
-                        // based on the size of the SurfaceView that contains the display.
-                        val viewSize = Size(width, height)
-                        val displaySize: Size =
-                            cameraHelper?.computeDisplaySizeFromViewSize(viewSize) ?: Size(
-                                width,
-                                height
-                            )
                         // Connect the converter to the camera-preview frames as its input (via
                         // previewFrameTexture), and configure the output width and height as the computed
                         // display size.
                         converter.setSurfaceTextureAndAttachToGLContext(
-                            previewFrameTexture, displaySize.width, displaySize.height
+                            previewFrameTexture, width, height
                         )
                     }
 
