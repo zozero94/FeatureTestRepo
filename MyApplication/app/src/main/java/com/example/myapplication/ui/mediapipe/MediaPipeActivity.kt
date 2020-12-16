@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.graphics.SurfaceTexture
 import android.os.Bundle
+import android.util.Log
 import android.view.SurfaceHolder
 import android.view.SurfaceView
 import android.view.View
@@ -37,8 +38,6 @@ class MediaPipeActivity : BaseActivity<ActivityMediapipeBinding>() {
         )
     }
     private val converter: ExternalTextureConverter by lazy { ExternalTextureConverter(eglManager.context) }
-
-    private var cameraHelper: CameraXPreviewHelper? = null
 
     init {
         System.loadLibrary("mediapipe_jni");
@@ -112,7 +111,7 @@ class MediaPipeActivity : BaseActivity<ActivityMediapipeBinding>() {
 
 
     private fun startCamera() {
-        cameraHelper = CameraXPreviewHelper().apply {
+        CameraXPreviewHelper().apply {
             setOnCameraStartedListener { surfaceTexture ->
                 previewFrameTexture = surfaceTexture
                 // Make the display view visible to start showing the preview. This triggers the
