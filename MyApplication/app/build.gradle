@@ -122,5 +122,10 @@ dependencies {
     implementation 'com.google.guava:guava:27.0.1-android'
     implementation 'com.google.guava:guava:27.0.1-android'
     implementation 'com.google.protobuf:protobuf-java:3.11.4'
+    /**
+     * MlKit
+     */
+    implementation 'com.google.mlkit:pose-detection:17.0.1-beta1'
+
 
 }

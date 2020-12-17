@@ -39,6 +39,10 @@
         <activity android:name=".ui.mediapipe.MediaPipeActivity">
 
         </activity>
+
+        <activity android:name=".ui.mlkit.MlkitActivity">
+
+        </activity>
     </application>
 
 </manifest>

@@ -14,6 +14,8 @@ sealed class TestType(var intent: Intent? = null, val text: String) {
     class AlarmPicker(intent: Intent? = null, text: String) : TestType(intent, text)
 
     class MediaPipe(intent: Intent? = null, text: String) : TestType(intent, text)
+
+    class Mlkit(intent: Intent? = null, text: String) : TestType(intent, text)
 }
 
 class MainViewModel @ViewModelInject constructor() :
