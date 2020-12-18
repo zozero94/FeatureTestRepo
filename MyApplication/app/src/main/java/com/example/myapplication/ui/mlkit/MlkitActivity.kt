@@ -23,6 +23,7 @@ import com.google.mlkit.vision.pose.PoseDetection
 import com.google.mlkit.vision.pose.PoseDetector
 import com.google.mlkit.vision.pose.defaults.PoseDetectorOptions
 import kotlinx.android.synthetic.main.activity_mlkit.*
+import java.util.*
 
 class MlkitActivity : BaseActivity<ActivityMlkitBinding>() {
     override val layoutId: Int = R.layout.activity_mlkit
@@ -34,6 +35,14 @@ class MlkitActivity : BaseActivity<ActivityMlkitBinding>() {
     }
 
     private val poseDetector: PoseDetector by lazy { PoseDetection.getClient(options) }
+
+    private val timer = Timer()
+    private var interval = 0
+    private var framesPerSecond = 0
+
+    init {
+        checkFPS()
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -119,12 +128,22 @@ class MlkitActivity : BaseActivity<ActivityMlkitBinding>() {
 
     private fun requestDetectInImage(image: InputImage): Task<Pose> {
         return poseDetector.process(image).addOnSuccessListener {
-            Log.i("post", it.toString())
+            interval++
+            binding.fps.text = "fps : $framesPerSecond"
         }
             .addOnFailureListener {
                 Log.e("failure", it.message)
             }
+    }
 
+    private fun checkFPS() {
+        timer.scheduleAtFixedRate(object : TimerTask() {
+            override fun run() {
+                framesPerSecond = interval
+                interval = 0
+            }
+
+        }, 0, 1000)
     }
 
     companion object {
