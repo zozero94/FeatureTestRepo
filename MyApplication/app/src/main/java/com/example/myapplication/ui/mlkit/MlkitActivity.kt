@@ -5,7 +5,6 @@ import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
-import android.os.SystemClock
 import android.util.Log
 import android.util.Size
 import android.widget.Toast
@@ -91,8 +90,6 @@ class MlkitActivity : BaseActivity<ActivityMlkitBinding>() {
                     it.setAnalyzer(
                         ContextCompat.getMainExecutor(this),
                         { imageProxy ->
-                            val frameStartMs = SystemClock.elapsedRealtime()
-
 
                             val inputImage = InputImage.fromMediaImage(
                                 imageProxy.image,
@@ -122,10 +119,10 @@ class MlkitActivity : BaseActivity<ActivityMlkitBinding>() {
 
     private fun requestDetectInImage(image: InputImage): Task<Pose> {
         return poseDetector.process(image).addOnSuccessListener {
-            Log.i("post",it.toString())
+            Log.i("post", it.toString())
         }
             .addOnFailureListener {
-                Log.e("failure",it.message)
+                Log.e("failure", it.message)
             }
 
     }
