@@ -5,18 +5,21 @@ import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
+import android.os.SystemClock
 import android.util.Log
+import android.util.Size
 import android.widget.Toast
 import androidx.camera.core.CameraSelector
 import androidx.camera.core.ImageAnalysis
-import androidx.camera.core.ImageProxy
 import androidx.camera.core.Preview
 import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.core.content.ContextCompat
 import com.example.myapplication.R
 import com.example.myapplication.databinding.ActivityMlkitBinding
 import com.example.myapplication.ui.base.BaseActivity
+import com.google.android.gms.tasks.Task
 import com.google.mlkit.vision.common.InputImage
+import com.google.mlkit.vision.pose.Pose
 import com.google.mlkit.vision.pose.PoseDetection
 import com.google.mlkit.vision.pose.PoseDetector
 import com.google.mlkit.vision.pose.defaults.PoseDetectorOptions
@@ -65,13 +68,14 @@ class MlkitActivity : BaseActivity<ActivityMlkitBinding>() {
 
     private fun startCamera() {
         val cameraProviderFuture = ProcessCameraProvider.getInstance(this)
-
         cameraProviderFuture.addListener(Runnable {
             // Used to bind the lifecycle of cameras to the lifecycle owner
             val cameraProvider: ProcessCameraProvider = cameraProviderFuture.get()
-
+            // Unbind use cases before rebinding
+            cameraProvider.unbindAll()
             // Preview
             val preview = Preview.Builder()
+                .setTargetResolution(Size(720, 1280))
                 .build()
                 .also {
                     it.setSurfaceProvider(viewFinder.surfaceProvider)
@@ -80,48 +84,50 @@ class MlkitActivity : BaseActivity<ActivityMlkitBinding>() {
             // Select back camera as a default
             val cameraSelector = CameraSelector.DEFAULT_FRONT_CAMERA
             val analysis = ImageAnalysis.Builder()
+                .setBackpressureStrategy(ImageAnalysis.STRATEGY_KEEP_ONLY_LATEST)
+                .setTargetResolution(Size(720, 1280))
                 .build()
                 .also {
                     it.setAnalyzer(
                         ContextCompat.getMainExecutor(this),
-                        YourImageAnalyzer(poseDetector)
+                        { imageProxy ->
+                            val frameStartMs = SystemClock.elapsedRealtime()
+
+
+                            val inputImage = InputImage.fromMediaImage(
+                                imageProxy.image,
+                                imageProxy.imageInfo.rotationDegrees
+                            )
+
+                            requestDetectInImage(inputImage)
+                                .addOnCompleteListener {
+                                    imageProxy.close()
+                                }
+                            // Pass image to an ML Kit Vision API
+                            // ...
+
+
+                        }
                     )
                 }
             try {
-                // Unbind use cases before rebinding
-                cameraProvider.unbindAll()
-
                 // Bind use cases to camera
                 cameraProvider.bindToLifecycle(this, cameraSelector, preview, analysis)
 
             } catch (exc: Exception) {
             }
 
-        }, ContextCompat.getMainExecutor(this))
+        }, ContextCompat.getMainExecutor(application))
     }
 
-    private class YourImageAnalyzer(private val poseDetector: PoseDetector) :
-        ImageAnalysis.Analyzer {
-
-        override fun analyze(imageProxy: ImageProxy) {
-            val mediaImage = imageProxy.image
-            if (mediaImage != null) {
-                val image =
-                    InputImage.fromMediaImage(mediaImage, imageProxy.imageInfo.rotationDegrees)
-                // Pass image to an ML Kit Vision API
-                // ...
-                val result = poseDetector.process(image)
-                    .addOnSuccessListener {
-                        Log.e("zero", it.toString())
-                    }
-                    .addOnFailureListener {
-                        Log.e("zero", it.message)
-                    }
-                Log.e("zero", result.toString())
+    private fun requestDetectInImage(image: InputImage): Task<Pose> {
+        return poseDetector.process(image).addOnSuccessListener {
+            Log.i("post",it.toString())
+        }
+            .addOnFailureListener {
+                Log.e("failure",it.message)
             }
 
-
-        }
     }
 
     companion object {
