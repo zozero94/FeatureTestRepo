@@ -1,12 +1,12 @@
 package com.example.data.service
 
-import com.example.data.model.BooksResponse
+import com.example.data.model.BooksApiResponse
 import retrofit2.http.GET
 import retrofit2.http.Path
 
 
 interface BooksService {
     @GET("https://api.itbook.store/1.0/search/{bookName}}")
-    suspend fun searchBook(@Path("bookName") bookName: String): BooksResponse
+    suspend fun searchBook(@Path("bookName") bookName: String): BooksApiResponse
 
 }

@@ -10,6 +10,8 @@ import javax.inject.Singleton
 class BooksRepositoryImpl @Inject constructor(private val booksService: BooksService) :
     BooksRepository {
     override suspend fun searchBook(bookName: String): List<Book> =
-        booksService.searchBook(bookName).books
+        booksService.searchBook(bookName).books.map {
+            Book(it.title, it.price, it.image)
+        }
 
 }
