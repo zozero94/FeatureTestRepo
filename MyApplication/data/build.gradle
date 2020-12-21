@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.library'
     id 'kotlin-android'
+    id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -40,6 +42,14 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.2.1'
 
+    /**
+     * DI 관련
+     */
+    //hilt
+    implementation 'com.google.dagger:hilt-android:2.30.1-alpha'
+    implementation "androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha02"
+    kapt 'com.google.dagger:hilt-android-compiler:2.30.1-alpha'
+    kapt "androidx.hilt:hilt-compiler:1.0.0-alpha02"
     /**
      * Test
      */
