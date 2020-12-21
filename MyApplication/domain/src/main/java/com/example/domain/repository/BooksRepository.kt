@@ -1,5 +1,7 @@
 package com.example.domain.repository
 
-interface BooksRepository {
+import com.example.domain.Book
 
+interface BooksRepository {
+    suspend fun searchBook(bookName: String): List<Book>
 }

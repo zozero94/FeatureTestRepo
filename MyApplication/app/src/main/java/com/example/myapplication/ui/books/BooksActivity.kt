@@ -3,6 +3,7 @@ package com.example.myapplication.ui.books
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.viewModels
 import com.example.myapplication.R
 import com.example.myapplication.databinding.ActivityBooksBinding
@@ -17,7 +18,10 @@ class BooksActivity : BaseActivity<ActivityBooksBinding>() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding.viewModel = this.viewModel
-
+        viewModel.searchBook("java")
+        viewModel.books.observe(this, {
+            Toast.makeText(this, it.toString(), Toast.LENGTH_SHORT).show()
+        })
     }
 
     companion object {
