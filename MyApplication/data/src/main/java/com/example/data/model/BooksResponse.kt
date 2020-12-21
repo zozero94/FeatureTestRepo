@@ -1,10 +1,13 @@
 package com.example.data.model
 
 import com.example.domain.Book
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
+@Serializable
 data class BooksResponse(
-    val error: String,
-    val total: String,
-    val page: String,
-    val books: List<Book>
+    @SerialName("error") val error: String,
+    @SerialName("total") val total: String,
+    @SerialName("page") val page: String,
+    @SerialName("books") val books: List<Book>
 )
