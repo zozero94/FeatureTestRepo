@@ -2,6 +2,7 @@ package com.example.myapplication.ui.main
 
 import android.os.Bundle
 import androidx.activity.viewModels
+import androidx.recyclerview.widget.GridLayoutManager
 import com.example.myapplication.R.layout
 import com.example.myapplication.databinding.ActivityMainBinding
 import com.example.myapplication.ui.alarm.AlarmPickerActivity
@@ -28,6 +29,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         super.onCreate(savedInstanceState)
         binding.viewModel = mainViewModel
         binding.mainContent.adapter = adapter
+        binding.mainContent.layoutManager = GridLayoutManager(this,2)
 
         mainViewModel.setTestItems(
             listOf(
