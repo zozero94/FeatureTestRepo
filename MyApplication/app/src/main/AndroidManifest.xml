@@ -43,6 +43,10 @@
         <activity android:name=".ui.mlkit.MlkitActivity">
 
         </activity>
+
+        <activity android:name=".ui.books.BooksActivity">
+
+        </activity>
     </application>
 
 </manifest>

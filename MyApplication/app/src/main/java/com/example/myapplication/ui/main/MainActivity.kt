@@ -7,6 +7,7 @@ import com.example.myapplication.R.layout
 import com.example.myapplication.databinding.ActivityMainBinding
 import com.example.myapplication.ui.alarm.AlarmPickerActivity
 import com.example.myapplication.ui.base.BaseActivity
+import com.example.myapplication.ui.books.BooksActivity
 import com.example.myapplication.ui.dictation.DictationActivity
 import com.example.myapplication.ui.kasper.KasperActivity
 import com.example.myapplication.ui.mediapipe.MediaPipeActivity
@@ -29,7 +30,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         super.onCreate(savedInstanceState)
         binding.viewModel = mainViewModel
         binding.mainContent.adapter = adapter
-        binding.mainContent.layoutManager = GridLayoutManager(this,2)
+        binding.mainContent.layoutManager = GridLayoutManager(this, 2)
 
         mainViewModel.setTestItems(
             listOf(
@@ -37,7 +38,8 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
                 TestType.DictationTest(DictationActivity.newIntent(this), "Dictation"),
                 TestType.AlarmPicker(AlarmPickerActivity.newIntent(this), "AlarmPicker"),
                 TestType.MediaPipe(MediaPipeActivity.newIntent(this), "MediaPipe"),
-                TestType.MediaPipe(MlkitActivity.newIntent(this), "Mlkit")
+                TestType.Mlkit(MlkitActivity.newIntent(this), "Mlkit"),
+                TestType.Books(BooksActivity.newIntent(this), "Books")
             )
         )
 
