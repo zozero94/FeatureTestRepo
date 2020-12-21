@@ -48,7 +48,7 @@ class RepositoryModule {
     ): Retrofit =
         Retrofit.Builder()
             .baseUrl(baseUrl)
-            .addConverterFactory(Json.asConverterFactory(contentType))
+            .addConverterFactory(Json { ignoreUnknownKeys = true }.asConverterFactory(contentType))
             .client(okHttpClient)
             .build()
 
