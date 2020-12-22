@@ -45,4 +45,6 @@
     <string name="set_alarm_string">알람 설정</string>
     <string name="set_alarm_repeat">반복 설정</string>
 
+    <string name="search_button_text">Search</string>
+
 </resources>
