@@ -20,6 +20,7 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
+@ExperimentalSerializationApi
 class RepositoryModule {
     @Provides
     @Singleton
@@ -38,7 +39,6 @@ class RepositoryModule {
     fun provideContentType() = "application/json".toMediaType()
 
 
-    @ExperimentalSerializationApi
     @Provides
     @Singleton
     fun provideRetrofit2(
