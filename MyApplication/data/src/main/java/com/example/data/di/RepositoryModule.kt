@@ -1,12 +1,16 @@
 package com.example.data.di
 
+import android.content.Context
+import androidx.room.Room
 import com.example.data.BooksRepositoryImpl
+import com.example.data.database.BookDatabase
 import com.example.data.service.BooksService
 import com.example.domain.repository.BooksRepository
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.json.Json
@@ -24,8 +28,13 @@ import javax.inject.Singleton
 class RepositoryModule {
     @Provides
     @Singleton
-    fun provideRepository(booksService: BooksService): BooksRepository =
-        BooksRepositoryImpl(booksService)
+    fun provideRepository(booksService: BooksService, db: BookDatabase): BooksRepository =
+        BooksRepositoryImpl(booksService, db)
+
+    @Provides
+    @Singleton
+    fun provideBookDatabase(@ApplicationContext context: Context) =
+        Room.databaseBuilder(context, BookDatabase::class.java, "book_db").build()
 
     @Provides
     @Singleton

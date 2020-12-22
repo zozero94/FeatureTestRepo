@@ -7,6 +7,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.domain.Book
 import com.example.domain.usecase.BooksUseCase
+import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
 
@@ -17,7 +18,9 @@ class BooksViewModel @ViewModelInject constructor(private val booksUseCase: Book
 
     fun searchBook(bookName: String) {
         viewModelScope.launch {
-            _books.value = booksUseCase.searchBook(bookName)
+            booksUseCase.searchBook(bookName).collect {
+                _books.value = it
+            }
         }
     }
 }
