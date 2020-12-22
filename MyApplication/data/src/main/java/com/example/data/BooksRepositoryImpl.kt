@@ -1,6 +1,6 @@
 package com.example.data
 
-import com.example.data.database.BookDatabase
+import com.example.data.database.BookDao
 import com.example.data.database.entity.BookEntity
 import com.example.data.service.BooksService
 import com.example.domain.Book
@@ -13,27 +13,24 @@ import javax.inject.Singleton
 @Singleton
 class BooksRepositoryImpl @Inject constructor(
     private val booksService: BooksService,
-    db: BookDatabase
+    private val dao: BookDao
 ) : BooksRepository {
 
-    private val bookDao = db.bookDao()
 
     override suspend fun searchBook(bookName: String): Flow<List<Book>> {
         return flow {
-            val localBook = bookDao.getBooks().map {
-                Book(it.title, it.price, it.image)
+            val localBook = dao.getBooks(bookName).map {
+                Book(it.title, it.subTitle, it.price, it.image)
             }
             emit(localBook)
-
-            val remoteBook = booksService.searchBook(bookName).books.asSequence().map {
+            val remoteBook = booksService.searchBook(bookName).books.map {
                 BookEntity(it.title, it.subTitle, it.price, it.image, it.url)
             }.also {
-                bookDao.insertBooks(it.toList())
+                dao.insertBooks(it)
             }.map {
-                Book(it.title, it.price, it.image)
+                Book(it.title, it.subTitle, it.price, it.image)
             }
-
-            emit(remoteBook.toList())
+            emit(remoteBook)
 
         }
     }

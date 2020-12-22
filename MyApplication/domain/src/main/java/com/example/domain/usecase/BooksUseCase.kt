@@ -9,7 +9,12 @@ import javax.inject.Inject
 class BooksUseCase @Inject constructor(private val booksRepository: BooksRepository) {
     suspend fun searchBook(bookName: String): Flow<List<Book>> {
         return booksRepository.searchBook(bookName).onStart {
-            this.emit(mutableListOf(Book("앙 스켈레톤", "$0.0", ""), Book("앙 스켈레톤", "$0.0", "")))
+            this.emit(
+                mutableListOf(
+                    Book("앙 스켈레톤", "$0.0", "", ""),
+                    Book("앙 스켈레톤", "$0.0", "", "")
+                )
+            )
         }
     }
 
