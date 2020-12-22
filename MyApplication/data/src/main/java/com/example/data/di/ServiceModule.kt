@@ -39,7 +39,10 @@ class ServiceModule {
     ): Retrofit =
         Retrofit.Builder()
             .baseUrl(baseUrl)
-            .addConverterFactory(Json { ignoreUnknownKeys = true }.asConverterFactory(contentType))
+            .addConverterFactory(Json {
+                ignoreUnknownKeys = true
+                isLenient = true
+            }.asConverterFactory(contentType))
             .client(okHttpClient)
             .build()
 

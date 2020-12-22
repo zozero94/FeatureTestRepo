@@ -5,10 +5,10 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class BooksApiResponse(
-    @SerialName("error") val error: String,
-    @SerialName("total") val total: String,
-    @SerialName("page") val page: String,
-    @SerialName("books") val books: List<BookResponse>
+    @SerialName("error") val error: String = "0",
+    @SerialName("total") val total: String = "0",
+    @SerialName("page") val page: String = "0",
+    @SerialName("books") val books: List<BookResponse> = emptyList()
 ) {
     @Serializable
     data class BookResponse(
