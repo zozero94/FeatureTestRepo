@@ -126,7 +126,7 @@ class MediaPipeActivity : BaseActivity<ActivityMediapipeBinding>() {
 
         fun newIntent(context: Context) = Intent(context, MediaPipeActivity::class.java)
 
-        private const val BINARY_GRAPH_NAME = "face_detection_mobile_gpu.binarypb"
+        private const val BINARY_GRAPH_NAME = "mobile_gpu.binarypb"
         private const val INPUT_VIDEO_STREAM_NAME = "input_video"
         private const val OUTPUT_VIDEO_STREAM_NAME = "output_video"
         private val CAMERA_FACING = CameraFacing.FRONT
