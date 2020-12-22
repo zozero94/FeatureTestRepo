@@ -8,9 +8,9 @@ import com.example.data.database.entity.BookEntity
 
 @Dao
 interface BookDao {
-    @Query("Select * from books")
-    suspend fun getBooks(): List<BookEntity>
+    @Query("Select * from books where title like '%' || :name || '%'")
+    suspend fun getBooks(name:String): List<BookEntity>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertBooks(books: List<BookEntity>)
+    suspend fun insertBooks(books: List<BookEntity>)
 }
