@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/tooltip_text"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_gravity="center"
-    android:background="@drawable/kasper_bg"
-    android:gravity="center"
-    android:text="캐스퍼입니다. 궁금한 건 제게 물어보세요."
-    android:textAlignment="center"
-    android:textColor="@color/white"
-    android:textSize="13sp" />
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <TextView
+        android:id="@+id/tooltip_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/kasper_bg"
+        android:gravity="center"
+        android:text="캐스퍼입니다. 궁금한 건 제게 물어보세요."
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="13sp" />
+</layout>
 

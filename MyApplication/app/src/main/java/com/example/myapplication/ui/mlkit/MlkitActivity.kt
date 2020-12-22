@@ -22,7 +22,6 @@ import com.google.mlkit.vision.pose.Pose
 import com.google.mlkit.vision.pose.PoseDetection
 import com.google.mlkit.vision.pose.PoseDetector
 import com.google.mlkit.vision.pose.defaults.PoseDetectorOptions
-import kotlinx.android.synthetic.main.activity_mlkit.*
 import java.util.*
 
 class MlkitActivity : BaseActivity<ActivityMlkitBinding>() {
@@ -86,7 +85,7 @@ class MlkitActivity : BaseActivity<ActivityMlkitBinding>() {
                 .setTargetResolution(Size(720, 1280))
                 .build()
                 .also {
-                    it.setSurfaceProvider(viewFinder.surfaceProvider)
+                    it.setSurfaceProvider(binding.viewFinder.surfaceProvider)
                 }
 
             // Select back camera as a default

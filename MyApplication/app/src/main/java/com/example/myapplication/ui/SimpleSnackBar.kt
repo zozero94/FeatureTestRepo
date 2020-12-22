@@ -3,15 +3,15 @@ package com.example.myapplication.ui
 
 import android.content.Context
 import android.util.AttributeSet
+import android.view.LayoutInflater
 import android.view.View
 import android.widget.TextView
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import androidx.constraintlayout.widget.ConstraintLayout
-import com.example.myapplication.R
+import com.example.myapplication.databinding.KasperTooltipBinding
 import com.example.myapplication.ui.SimpleSnackBar.Builder
 import com.google.android.material.snackbar.Snackbar
-import kotlinx.android.synthetic.main.kasper_tooltip.view.*
 
 /**
  *
@@ -52,12 +52,14 @@ class SimpleSnackBar private constructor(
         defStyleAttr
     )
 
+    private val binding by lazy { KasperTooltipBinding.inflate(LayoutInflater.from(context)) }
     private val snackBar: Snackbar = Snackbar.make(pos, "", duration)
 
     init {
-        inflate(context, R.layout.kasper_tooltip, this)
+
+//        inflate(context, R.layout.kasper_tooltip, this)
         (snackBar.view as Snackbar.SnackbarLayout).apply {
-            background = null
+            background=null
             findViewById<TextView>(com.google.android.material.R.id.snackbar_text).visibility =
                 View.INVISIBLE
             setPadding(0, 0, 0, 0)
@@ -66,12 +68,12 @@ class SimpleSnackBar private constructor(
     }
 
     fun text(@StringRes stringRes: Int): SimpleSnackBar {
-        tooltip_text.text = context.resources.getString(stringRes)
+        binding.tooltipText.text = context.resources.getString(stringRes)
         return this
     }
 
     fun text(string: String): SimpleSnackBar {
-        tooltip_text.text = string
+        binding.tooltipText.text = string
         return this
     }
 

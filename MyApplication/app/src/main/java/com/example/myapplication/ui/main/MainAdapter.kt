@@ -2,12 +2,9 @@ package com.example.myapplication.ui.main
 
 import android.content.Intent
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.myapplication.R
-import kotlinx.android.extensions.LayoutContainer
-import kotlinx.android.synthetic.main.list_item_main.view.*
+import com.example.myapplication.databinding.ListItemMainBinding
 import java.util.*
 
 class MainAdapter(var onClick: ((Intent?) -> Unit)? = null) :
@@ -19,22 +16,23 @@ class MainAdapter(var onClick: ((Intent?) -> Unit)? = null) :
         notifyDataSetChanged()
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainViewHolder =
-        MainViewHolder(
-            LayoutInflater.from(parent.context).inflate(R.layout.list_item_main, parent, false)
-        ).apply {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainViewHolder {
+        val binding = ListItemMainBinding.inflate(LayoutInflater.from(parent.context))
+        return MainViewHolder(binding).apply {
             itemView.setOnClickListener { onClick?.invoke(itemList[adapterPosition].intent) }
         }
+    }
+
 
     override fun onBindViewHolder(holder: MainViewHolder, position: Int) =
         holder.bind(itemList[position].text)
 
     override fun getItemCount(): Int = itemList.size
 
-    data class MainViewHolder(override val containerView: View) :
-        RecyclerView.ViewHolder(containerView), LayoutContainer {
+    data class MainViewHolder(private val binding: ListItemMainBinding) :
+        RecyclerView.ViewHolder(binding.root) {
         fun bind(text: String) {
-            containerView.button.text = text
+            binding.button.text = text
         }
 
     }

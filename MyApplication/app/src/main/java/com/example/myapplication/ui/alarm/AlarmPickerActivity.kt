@@ -10,12 +10,11 @@ import android.widget.TextView
 import com.example.myapplication.R
 import com.example.myapplication.databinding.ActivityAlarmPickerBinding
 import com.example.myapplication.ui.base.BaseActivity
-import kotlinx.android.synthetic.main.activity_alarm_picker.*
 
 class AlarmPickerActivity : BaseActivity<ActivityAlarmPickerBinding>() {
     override val layoutId: Int = R.layout.activity_alarm_picker
 
-    private val dayList by lazy { listOf(mon, tue, wed, thu, fri, sat, sun) }
+    private val dayList by lazy { listOf(binding.mon, binding.tue, binding.wed, binding.thu, binding.fri, binding.sat, binding.sun) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,7 +41,7 @@ class AlarmPickerActivity : BaseActivity<ActivityAlarmPickerBinding>() {
     @SuppressLint("ClickableViewAccessibility")
     private fun setDragDetectListener() {
         var previousDay: TextView? = null
-        dayWrapper.setOnTouchListener { _, event ->
+        binding.dayWrapper.setOnTouchListener { _, event ->
             when (event?.action) {
                 MotionEvent.ACTION_DOWN -> {
                     previousDay = null
