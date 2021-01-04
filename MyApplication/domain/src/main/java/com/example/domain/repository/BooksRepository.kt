@@ -4,5 +4,5 @@ import com.example.domain.Book
 import kotlinx.coroutines.flow.Flow
 
 interface BooksRepository {
-    suspend fun searchBook(bookName: String): Flow<List<Book>>
+    suspend fun searchBookAndUpdateCache(bookName: String): Flow<List<Book>>
 }

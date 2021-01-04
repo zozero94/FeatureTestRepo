@@ -2,6 +2,7 @@ package com.example.data
 
 import com.example.data.database.BookDao
 import com.example.data.database.entity.BookEntity
+import com.example.data.model.BooksApiResponse
 import com.example.data.service.BooksService
 import com.example.domain.Book
 import com.example.domain.repository.BooksRepository
@@ -16,23 +17,27 @@ class BooksRepositoryImpl @Inject constructor(
     private val dao: BookDao
 ) : BooksRepository {
 
-
-    override suspend fun searchBook(bookName: String): Flow<List<Book>> {
+    override suspend fun searchBookAndUpdateCache(bookName: String): Flow<List<Book>> {
         return flow {
-            val localBook = dao.getBooks(bookName).map {
-                Book(it.title, it.subTitle, it.price, it.image)
-            }
-            emit(localBook)
-            val remoteBook = booksService.searchBook(bookName).books.map {
-                BookEntity(it.title, it.subTitle, it.price, it.image, it.url)
-            }.also {
-                dao.insertBooks(it)
-            }.map {
-                Book(it.title, it.subTitle, it.price, it.image)
-            }
-            emit(remoteBook)
+            val localBook = getLocalBook(bookName)
+            val cachedBook = localBook.map { it.mapToBook() }
+            emit(cachedBook)
 
+            val remoteBook = getRemoteBook(bookName)
+            val newBooks = remoteBook.map { it.mapToBookEntity() }
+            dao.insertBooks(newBooks)
+
+            val updatedBook = newBooks.map { it.mapToBook() }
+            emit(updatedBook)
         }
+    }
+
+    private suspend fun getLocalBook(bookName: String): List<BookEntity> {
+        return dao.getBooks(bookName)
+    }
+
+    private suspend fun getRemoteBook(bookName: String): List<BooksApiResponse.BookResponse> {
+        return booksService.searchBook(bookName).books
     }
 
 

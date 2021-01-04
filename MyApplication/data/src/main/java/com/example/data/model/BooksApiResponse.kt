@@ -1,5 +1,7 @@
 package com.example.data.model
 
+import com.example.data.database.entity.BookEntity
+import com.example.domain.Book
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -17,5 +19,13 @@ data class BooksApiResponse(
         @SerialName("price") val price: String,
         @SerialName("image") val image: String,
         @SerialName("url") val url: String
-    )
+    ) {
+        fun mapToBook(): Book {
+            return Book(title, subTitle, price, image)
+        }
+
+        fun mapToBookEntity(): BookEntity {
+            return BookEntity(title, subTitle, price, image, url)
+        }
+    }
 }
