@@ -4,8 +4,8 @@ import android.content.Context
 import android.content.Intent
 import android.graphics.SurfaceTexture
 import android.os.Bundle
+import android.util.Log
 import android.view.SurfaceHolder
-import android.view.SurfaceView
 import android.view.View
 import com.example.myapplication.R
 import com.example.myapplication.databinding.ActivityMediapipeBinding
@@ -18,6 +18,7 @@ import com.google.mediapipe.components.PermissionHelper
 import com.google.mediapipe.framework.AndroidAssetUtil
 import com.google.mediapipe.glutil.EglManager
 import org.webrtc.SurfaceViewRenderer
+import java.util.*
 
 
 class MediaPipeActivity : BaseActivity<ActivityMediapipeBinding>() {
@@ -39,19 +40,38 @@ class MediaPipeActivity : BaseActivity<ActivityMediapipeBinding>() {
     }
     private val converter: ExternalTextureConverter by lazy { ExternalTextureConverter(eglManager.context) }
 
+    private val timer = Timer()
+    private var interval = 0
+    private var framesPerSecond = 0
+
     init {
-        System.loadLibrary("mediapipe_jni");
-        System.loadLibrary("opencv_java3");
+        System.loadLibrary("mediapipe_jni")
+        System.loadLibrary("opencv_java3")
+        checkFPS()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setupPreviewDisplayView();
+        setupPreviewDisplayView()
 
         AndroidAssetUtil.initializeNativeAssetManager(this)
         processor.videoSurfaceOutput.setFlipY(FLIP_FRAMES_VERTICALLY)
+        processor.graph.addPacketCallback(OUTPUT_VIDEO_STREAM_NAME) {
+            interval++
+            Log.i("fps : ", framesPerSecond.toString())
+        }
         PermissionHelper.checkAndRequestCameraPermissions(this)
 
+    }
+
+    private fun checkFPS() {
+        timer.scheduleAtFixedRate(object : TimerTask() {
+            override fun run() {
+                framesPerSecond = interval
+                interval = 0
+            }
+
+        }, 0, 1000)
     }
 
     override fun onResume() {
