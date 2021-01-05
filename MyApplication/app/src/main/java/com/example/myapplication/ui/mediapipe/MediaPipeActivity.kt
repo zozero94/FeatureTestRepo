@@ -17,6 +17,7 @@ import com.google.mediapipe.components.FrameProcessor
 import com.google.mediapipe.components.PermissionHelper
 import com.google.mediapipe.framework.AndroidAssetUtil
 import com.google.mediapipe.glutil.EglManager
+import org.webrtc.SurfaceViewRenderer
 
 
 class MediaPipeActivity : BaseActivity<ActivityMediapipeBinding>() {
@@ -24,7 +25,7 @@ class MediaPipeActivity : BaseActivity<ActivityMediapipeBinding>() {
 
 
     private var previewFrameTexture: SurfaceTexture? = null
-    private val previewDisplayView: SurfaceView by lazy { SurfaceView(this) }
+    private val previewDisplayView: SurfaceViewRenderer by lazy { SurfaceViewRenderer(this) }
 
     private val eglManager: EglManager by lazy { EglManager(null) }
     private val processor: FrameProcessor by lazy {
