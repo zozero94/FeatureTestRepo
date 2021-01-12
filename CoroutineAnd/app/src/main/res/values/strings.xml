@@ -1,5 +1,0 @@
-<resources>
-    <string name="app_name">CoroutineTest</string>
-
-    <string name="request_data">데이터 요청하기</string>
-</resources>
