@@ -1,55 +1,81 @@
-import io.reactivex.rxjava3.core.Observable
+import io.reactivex.rxjava3.core.Completable
 import io.reactivex.rxjava3.core.Single
-import io.reactivex.rxjava3.schedulers.Schedulers
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.flow.flow
-import kotlinx.coroutines.flow.map
-import kotlinx.coroutines.rx3.asFlow
-import kotlinx.coroutines.rx3.asObservable
-import kotlinx.coroutines.withContext
-import org.reactivestreams.Publisher
+import java.util.*
 
-fun main() {
 
-    Observable.create<String> {
-        it.onNext("코루틴")
-        println("craete : ${Thread.currentThread()}")
+fun uploadFiles(sizes: List<Long>, force: Boolean = false): Completable = Completable.fromAction {
+    println("Uploading...")
+
+    if (!force && sizes.any { it > 100L }) {
+        throw IllegalStateException("Too large")
     }
-        .observeOn(Schedulers.io())
-        .map {
-            println("map1 : ${Thread.currentThread()}")
-            "$it 테스트"
-        }
-        .observeOn(Schedulers.io())
-        .asFlow()
-        .map {
-            println("map2 : ${Thread.currentThread()}")
-            withContext(Dispatchers.IO){
-                println("map2-1 : ${Thread.currentThread()}")
-            }
-            it
-        }
-        .asObservable()
-        .map {
-            println("map3 : ${Thread.currentThread()}")
-            it
-        }
-        .observeOn(Schedulers.computation())
-        .map {
-            println("map4 : ${Thread.currentThread()}")
-            it
-        }
-        .subscribeOn(Schedulers.newThread())
-        .subscribe {
-            println("sub : ${Thread.currentThread()}")
-        }
 
     Thread.sleep(1000)
 
-
-
-
+    println("Uploaded ${sizes.size} file(s)")
 }
 
+private fun actualUploadFiles(sizes: List<Long>): Completable = Completable.fromAction {
+    println("Uploaded ${sizes.size} file(s)")
+}
 
+fun uploadFiles(sizes: List<Long>, onExceeded: Single<Boolean>): Completable = Completable.fromAction {
+    println("Uploading...")
+    if (sizes.any { it > 100L }) {
+        throw IllegalStateException("Too large")
+    }
+}.onErrorResumeNext { e ->
+    println(e)
+    if (e is IllegalStateException) {
+        onExceeded
+            .flatMapCompletable { result ->
+                if (result) {
+                    Completable.complete()
+                } else {
+                    Completable.error(e)
+                }
+            }
+    } else Completable.error(e)
+}.andThen(actualUploadFiles(sizes))
 
+val scanner = Scanner(System.`in`)
+
+fun userInput(msg: String): Single<Boolean> = Single.create {
+    print("[$msg] (yes/no)")
+    while (scanner.hasNextLine()) {
+        when (scanner.nextLine().trim()) {
+            "yes" -> it.onSuccess(true)
+            "no" -> it.onSuccess(false)
+        }
+    }
+}
+
+fun main() {
+    val files = listOf<Long>(1, 12, 3)
+    val disposable = uploadFiles(files)
+        .onErrorResumeNext { e ->
+            println(e)
+            if (e is IllegalStateException) {
+                userInput("Do you want to upload large files?")
+                    .flatMapCompletable { result ->
+                        if (result) {
+                            uploadFiles(files, true)
+                        } else {
+                            Completable.error(e)
+                        }
+                    }
+            } else Completable.error(e)
+        }
+        .subscribe {
+            println("HERE")
+        }
+
+//    val disposable = uploadFiles(files, userInput("Size over"))
+//        .subscribe {
+//            println("HERE")
+//        }
+
+    while (!disposable.isDisposed) {
+        Thread.sleep(100)
+    }
+}
