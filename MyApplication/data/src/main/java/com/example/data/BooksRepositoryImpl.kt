@@ -7,10 +7,12 @@ import com.example.data.model.mapToBookEntities
 import com.example.data.service.BooksService
 import com.example.domain.Book
 import com.example.domain.repository.BooksRepository
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.onStart
+import kotlinx.coroutines.withContext
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -22,17 +24,19 @@ class BooksRepositoryImpl @Inject constructor(
 
     override suspend fun getBooks(bookName: String): Flow<List<Book>> {
         return dao.getBooks(bookName)
-            .onStart {
-                val remoteBook = getRemoteBook(bookName)
-                dao.insertBooks(remoteBook.mapToBookEntities())
-            }
             .map { it.mapToBooks() }
+            .onStart {
+                withContext(Dispatchers.IO) {
+                    val remoteBook = getRemoteBook(bookName)
+                    dao.insertBooks(remoteBook.mapToBookEntities())
+                }
+            }
             .distinctUntilChanged()
+
     }
 
     private suspend fun getRemoteBook(bookName: String): List<BooksApiResponse.BookResponse> {
         return booksService.searchBook(bookName).books
     }
-
 
 }
