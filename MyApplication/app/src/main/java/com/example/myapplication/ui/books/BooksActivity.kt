@@ -7,6 +7,8 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.activity.viewModels
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
@@ -37,7 +39,7 @@ class BooksActivity : BaseActivity<ActivityBooksBinding>() {
         }
 
         viewModel.bindBooks().observe(this, {
-            bookAdapter.replaceItem(it)
+            bookAdapter.submitList(it)
         })
     }
 
@@ -47,30 +49,21 @@ class BooksActivity : BaseActivity<ActivityBooksBinding>() {
 }
 
 class BookAdapter(private val onClick: ((Book) -> Unit)? = null) :
-    RecyclerView.Adapter<BookAdapter.BookViewHolder>() {
-
-    private var bookList: List<Book> = emptyList()
-
-    fun replaceItem(books: List<Book>) {
-        bookList = books
-        notifyDataSetChanged()
-    }
+    ListAdapter<Book, BookAdapter.BookViewHolder>(BookDiffCallback) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BookViewHolder {
         val binding =
             ListItemBookBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return BookViewHolder(binding).apply {
             binding.root.setOnClickListener {
-                onClick?.invoke(bookList[adapterPosition])
+                onClick?.invoke(getItem(adapterPosition))
             }
         }
     }
 
     override fun onBindViewHolder(holder: BookViewHolder, position: Int) {
-        holder.bind(bookList[position])
+        holder.bind(getItem(position))
     }
-
-    override fun getItemCount(): Int = bookList.size
 
     class BookViewHolder(private val binding: ListItemBookBinding) :
         RecyclerView.ViewHolder(binding.root) {
@@ -82,5 +75,22 @@ class BookAdapter(private val onClick: ((Book) -> Unit)? = null) :
                 .centerCrop()
                 .into(binding.bookImage)
         }
+    }
+
+    object BookDiffCallback : DiffUtil.ItemCallback<Book>() {
+        override fun areItemsTheSame(
+            oldItem: Book,
+            newItem: Book
+        ): Boolean {
+            return oldItem.title == newItem.title
+        }
+
+        override fun areContentsTheSame(
+            oldItem: Book,
+            newItem: Book
+        ): Boolean {
+            return oldItem == newItem
+        }
+
     }
 }
