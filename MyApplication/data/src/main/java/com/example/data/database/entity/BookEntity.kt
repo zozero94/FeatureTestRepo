@@ -12,8 +12,10 @@ data class BookEntity(
     @ColumnInfo(name = "price") val price: String,
     @ColumnInfo(name = "image") val image: String,
     @ColumnInfo(name = "url") val url: String
-) {
-    fun mapToBook(): Book {
-        return Book(title, subTitle, price, image)
+)
+
+fun List<BookEntity>.mapToBooks(): List<Book> {
+    return this.map {
+        Book(it.title, it.subTitle, it.price, it.image)
     }
 }

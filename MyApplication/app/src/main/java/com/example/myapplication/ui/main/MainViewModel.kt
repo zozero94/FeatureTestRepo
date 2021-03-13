@@ -6,7 +6,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-sealed class TestType(var intent: Intent? = null, val text: String) {//todo Invocation Handler 으로 중복을 줄일 수 있는가 고려해보기
+sealed class TestType(var intent: Intent? = null, val text: String) {
     class KasperTest(intent: Intent? = null, text: String) : TestType(intent, text)
 
     class DictationTest(intent: Intent? = null, text: String) : TestType(intent, text)

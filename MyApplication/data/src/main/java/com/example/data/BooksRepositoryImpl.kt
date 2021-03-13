@@ -1,13 +1,16 @@
 package com.example.data
 
 import com.example.data.database.BookDao
-import com.example.data.database.entity.BookEntity
+import com.example.data.database.entity.mapToBooks
 import com.example.data.model.BooksApiResponse
+import com.example.data.model.mapToBookEntities
 import com.example.data.service.BooksService
 import com.example.domain.Book
 import com.example.domain.repository.BooksRepository
 import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.flow
+import kotlinx.coroutines.flow.distinctUntilChanged
+import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.flow.onStart
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -17,23 +20,14 @@ class BooksRepositoryImpl @Inject constructor(
     private val dao: BookDao
 ) : BooksRepository {
 
-    override suspend fun searchBookAndUpdateCache(bookName: String): Flow<List<Book>> {
-        return flow {
-            val localBook = getLocalBook(bookName)
-            val cachedBook = localBook.map { it.mapToBook() }
-            emit(cachedBook)
-
-            val remoteBook = getRemoteBook(bookName)
-            val newBooks = remoteBook.map { it.mapToBookEntity() }
-            dao.insertBooks(newBooks)
-
-            val updatedBook = newBooks.map { it.mapToBook() }
-            emit(updatedBook)
-        }
-    }
-
-    private suspend fun getLocalBook(bookName: String): List<BookEntity> {
+    override suspend fun getBooks(bookName: String): Flow<List<Book>> {
         return dao.getBooks(bookName)
+            .onStart {
+                val remoteBook = getRemoteBook(bookName)
+                dao.insertBooks(remoteBook.mapToBookEntities())
+            }
+            .map { it.mapToBooks() }
+            .distinctUntilChanged()
     }
 
     private suspend fun getRemoteBook(bookName: String): List<BooksApiResponse.BookResponse> {

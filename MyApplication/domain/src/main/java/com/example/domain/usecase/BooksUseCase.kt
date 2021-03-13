@@ -7,6 +7,6 @@ import javax.inject.Inject
 
 class BooksUseCase @Inject constructor(private val booksRepository: BooksRepository) {
     suspend fun searchBook(bookName: String): Flow<List<Book>> {
-        return booksRepository.searchBookAndUpdateCache(bookName)
+        return booksRepository.getBooks(bookName)
     }
 }

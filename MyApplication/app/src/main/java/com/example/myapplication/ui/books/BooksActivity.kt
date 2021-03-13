@@ -36,7 +36,7 @@ class BooksActivity : BaseActivity<ActivityBooksBinding>() {
             viewModel.searchBook(binding.searchEdit.text.toString())
         }
 
-        viewModel.books.observe(this, {
+        viewModel.bindBooks().observe(this, {
             bookAdapter.replaceItem(it)
         })
     }

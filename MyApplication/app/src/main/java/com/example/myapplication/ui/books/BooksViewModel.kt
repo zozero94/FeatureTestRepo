@@ -14,7 +14,7 @@ import kotlinx.coroutines.launch
 class BooksViewModel @ViewModelInject constructor(private val booksUseCase: BooksUseCase) :
     ViewModel() {
     private val _books = MutableLiveData<List<Book>>()
-    val books: LiveData<List<Book>> = _books
+    fun bindBooks(): LiveData<List<Book>> = _books
 
     fun searchBook(bookName: String) {
         viewModelScope.launch {
