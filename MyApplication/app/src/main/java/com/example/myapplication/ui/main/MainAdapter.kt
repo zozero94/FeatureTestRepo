@@ -9,9 +9,9 @@ import java.util.*
 
 class MainAdapter(var onClick: ((Intent?) -> Unit)? = null) :
     RecyclerView.Adapter<MainAdapter.MainViewHolder>() {
-    private val itemList = LinkedList<Pair<Intent,String>>()
+    private val itemList = LinkedList<TestType>()
 
-    fun replaceItems(lists: List<Pair<Intent, String>>) {
+    fun replaceItems(lists: List<TestType>) {
         itemList.addAll(lists)
         notifyDataSetChanged()
     }
@@ -19,13 +19,13 @@ class MainAdapter(var onClick: ((Intent?) -> Unit)? = null) :
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainViewHolder {
         val binding = ListItemMainBinding.inflate(LayoutInflater.from(parent.context))
         return MainViewHolder(binding).apply {
-            itemView.setOnClickListener { onClick?.invoke(itemList[adapterPosition].first) }
+            itemView.setOnClickListener { onClick?.invoke(itemList[adapterPosition].intent) }
         }
     }
 
 
     override fun onBindViewHolder(holder: MainViewHolder, position: Int) =
-        holder.bind(itemList[position].second)
+        holder.bind(itemList[position].text)
 
     override fun getItemCount(): Int = itemList.size
 

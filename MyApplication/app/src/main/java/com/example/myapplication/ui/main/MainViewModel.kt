@@ -1,52 +1,33 @@
 package com.example.myapplication.ui.main
 
-import android.app.Application
 import android.content.Intent
 import androidx.hilt.lifecycle.ViewModelInject
-import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.example.myapplication.ui.alarm.AlarmPickerActivity
-import com.example.myapplication.ui.books.BooksActivity
-import com.example.myapplication.ui.dictation.DictationActivity
-import com.example.myapplication.ui.kasper.KasperActivity
-import com.example.myapplication.ui.mediapipe.MediaPipeActivity
-import com.example.myapplication.ui.mlkit.MlkitActivity
+import androidx.lifecycle.ViewModel
 
-interface FeatureTest {
-    @FeatureAnnotation("Kasper")
-    fun kasperTest(newIntent: Intent): Pair<Intent, String>
+sealed class TestType(var intent: Intent? = null, val text: String) {//todo Invocation Handler 으로 중복을 줄일 수 있는가 고려해보기
+    class KasperTest(intent: Intent? = null, text: String) : TestType(intent, text)
 
-    @FeatureAnnotation("Dictation")
-    fun dictationTest(newIntent: Intent): Pair<Intent, String>
+    class DictationTest(intent: Intent? = null, text: String) : TestType(intent, text)
 
-    @FeatureAnnotation("AlarmPicker")
-    fun alarmPicker(newIntent: Intent): Pair<Intent, String>
+    class AlarmPicker(intent: Intent? = null, text: String) : TestType(intent, text)
 
-    @FeatureAnnotation("MediaPipe")
-    fun mediaPipe(newIntent: Intent): Pair<Intent, String>
+    class MediaPipe(intent: Intent? = null, text: String) : TestType(intent, text)
 
-    @FeatureAnnotation("Mlkit")
-    fun mlkit(newIntent: Intent): Pair<Intent, String>
+    class Mlkit(intent: Intent? = null, text: String) : TestType(intent, text)
 
-    @FeatureAnnotation("Books")
-    fun books(newIntent: Intent): Pair<Intent, String>
+    class Books(intent: Intent? = null, text: String) : TestType(intent, text)
 }
 
-class MainViewModel @ViewModelInject constructor(application: Application) :
-    AndroidViewModel(application) {
-    private val factory = TestType.newFactory(FeatureTest::class.java)
+class MainViewModel @ViewModelInject constructor() :
+    ViewModel() {
+    private val listItem = MutableLiveData<List<TestType>>()
 
-    private val features = listOf(
-        factory.kasperTest(KasperActivity.newIntent(application)),
-        factory.dictationTest(DictationActivity.newIntent(application)),
-        factory.alarmPicker(AlarmPickerActivity.newIntent(application)),
-        factory.mediaPipe(MediaPipeActivity.newIntent(application)),
-        factory.mlkit(MlkitActivity.newIntent(application)),
-        factory.books(BooksActivity.newIntent(application))
-    )
-    private val listItem = MutableLiveData(features)
+    fun getItemList(): LiveData<List<TestType>> = listItem
 
-    fun getItemList() = listItem
-
+    fun setTestItems(testList: List<TestType>) {
+        listItem.value = testList
+    }
 
 }
