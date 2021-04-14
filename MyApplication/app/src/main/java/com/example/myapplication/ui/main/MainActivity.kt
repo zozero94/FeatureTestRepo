@@ -12,6 +12,7 @@ import com.example.myapplication.ui.dictation.DictationActivity
 import com.example.myapplication.ui.kasper.KasperActivity
 import com.example.myapplication.ui.mediapipe.MediaPipeActivity
 import com.example.myapplication.ui.mlkit.MlkitActivity
+import com.example.myapplication.ui.shareui.ShareUiActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -39,7 +40,8 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
                 TestType.AlarmPicker(AlarmPickerActivity.newIntent(this), "AlarmPicker"),
                 TestType.MediaPipe(MediaPipeActivity.newIntent(this), "MediaPipe"),
                 TestType.Mlkit(MlkitActivity.newIntent(this), "Mlkit"),
-                TestType.Books(BooksActivity.newIntent(this), "Books")
+                TestType.Books(BooksActivity.newIntent(this), "Books"),
+                TestType.ShareUi(ShareUiActivity.newIntent(this), "ShareUi")
             )
         )
 

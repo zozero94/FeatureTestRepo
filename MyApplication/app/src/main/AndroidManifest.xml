@@ -3,7 +3,10 @@
     package="com.example.myapplication">
 
     <uses-feature android:name="android.hardware.camera.any" />
+
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
 
     <uses-sdk
         android:minSdkVersion="21"
@@ -47,6 +50,16 @@
         <activity android:name=".ui.books.BooksActivity">
 
         </activity>
+
+        <activity android:name=".ui.shareui.ShareUiActivity">
+
+        </activity>
+
+        <activity
+            android:name=".ui.shareui.MediaProjectionActivity"
+            android:theme="@style/Theme.Transparent" />
+
+        <service android:name=".ui.shareui.MediaProjectionService" />
     </application>
 
 </manifest>

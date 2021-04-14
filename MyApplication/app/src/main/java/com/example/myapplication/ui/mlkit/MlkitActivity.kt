@@ -131,7 +131,7 @@ class MlkitActivity : BaseActivity<ActivityMlkitBinding>() {
             binding.fps.text = "fps : $framesPerSecond"
         }
             .addOnFailureListener {
-                Log.e("failure", it.message)
+                Log.e("failure", it.message ?: "")
             }
     }
 

@@ -18,6 +18,8 @@ sealed class TestType(var intent: Intent? = null, val text: String) {
     class Mlkit(intent: Intent? = null, text: String) : TestType(intent, text)
 
     class Books(intent: Intent? = null, text: String) : TestType(intent, text)
+
+    class ShareUi(intent: Intent? = null, text: String) : TestType(intent, text)
 }
 
 class MainViewModel @ViewModelInject constructor() :
