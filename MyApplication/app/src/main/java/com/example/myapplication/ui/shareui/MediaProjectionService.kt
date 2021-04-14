@@ -1,15 +1,21 @@
 package com.example.myapplication.ui.shareui
 
-import android.app.Service
+import android.app.*
 import android.content.Context
 import android.content.Intent
 import android.graphics.PixelFormat
+import android.hardware.display.DisplayManager
+import android.hardware.display.VirtualDisplay
+import android.media.projection.MediaProjection
+import android.media.projection.MediaProjectionManager
 import android.os.Build
 import android.os.IBinder
 import android.util.Log
 import android.view.Gravity
 import android.view.LayoutInflater
+import android.view.Surface
 import android.view.WindowManager
+import com.example.myapplication.R
 import com.example.myapplication.databinding.WindowViewBinding
 
 //TODO
@@ -18,7 +24,21 @@ import com.example.myapplication.databinding.WindowViewBinding
 // 3. mediaProjection 관련 처리
 class MediaProjectionService : Service() {
     companion object {
-        fun newService(context: Context) = Intent(context, MediaProjectionService::class.java)
+        private const val FOREGROUND_SERVICE_ID = 100
+        private const val CHANNEL_ID = "MediaProjectionService"
+
+        fun newService(context: Context, resultCode: Int, requestData: Intent) =
+            Intent(context, MediaProjectionService::class.java).apply {
+                putExtra(EXTRA_RESULT_CODE, resultCode)
+                putExtra(EXTRA_REQUEST_DATA, requestData)
+            }
+
+    }
+
+    private lateinit var mediaProjection: MediaProjection
+    private lateinit var virtualDisplay: VirtualDisplay
+    private val mediaProjectionManager: MediaProjectionManager by lazy {
+        getSystemService(Context.MEDIA_PROJECTION_SERVICE) as MediaProjectionManager
     }
 
     private lateinit var binding: WindowViewBinding
@@ -37,9 +57,49 @@ class MediaProjectionService : Service() {
 
     override fun onCreate() {
         super.onCreate()
-        Log.i("zero", "보이진 않지만 나는 떳다.")
+        Log.i("zero", "onCreate")
+        startForegroundService()
         initBinding(getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater)
         binding.create()
+    }
+
+    override fun onStartCommand(intent: Intent, flags: Int, startId: Int): Int {
+        Log.i("zero", "onStartCommand $intent")
+        initMediaProjection(intent)
+        return START_REDELIVER_INTENT
+    }
+
+    private fun startForegroundService() {
+        createNotificationChannel()
+        val notificationIntent = Intent(this, ShareUiActivity::class.java)
+        val pendingIntent = PendingIntent.getActivity(
+            this,
+            0, notificationIntent, 0
+        )
+
+        val notification = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            Notification.Builder(this, CHANNEL_ID)
+        } else {
+            Notification.Builder(this)
+        }
+            .setContentTitle("Foreground Service")
+            .setSmallIcon(R.drawable.ic_launcher_foreground)
+            .setContentIntent(pendingIntent)
+            .build()
+        startForeground(FOREGROUND_SERVICE_ID, notification)
+    }
+
+    private fun createNotificationChannel() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            val serviceChannel = NotificationChannel(
+                CHANNEL_ID,
+                "Foreground Service Channel",
+                NotificationManager.IMPORTANCE_DEFAULT
+            )
+            (getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager).apply {
+                createNotificationChannel(serviceChannel)
+            }
+        }
     }
 
     private fun initBinding(layoutInflater: LayoutInflater) {
@@ -65,4 +125,52 @@ class MediaProjectionService : Service() {
         btnStopService.setOnClickListener { stopSelf() }
     }
 
+    private fun initMediaProjection(intent: Intent) {
+        val data = intent.getParcelableExtra<Intent>(EXTRA_REQUEST_DATA) ?: return
+        val resultCode = intent.getIntExtra(EXTRA_RESULT_CODE, Activity.RESULT_CANCELED)
+        mediaProjection = mediaProjectionManager.getMediaProjection(resultCode, data)
+        mediaProjection.registerCallback(object : MediaProjection.Callback() {
+            override fun onStop() {
+                super.onStop()
+                Log.e("zero", "onStop")
+            }
+        }, null)
+        val deviceSize = DeviceUtil.getDeviceSize(this)
+        startMediaProjection(
+            surface = binding.surfaceView.holder.surface,
+            width = deviceSize.width,
+            height = deviceSize.height
+        )
+    }
+
+
+    private fun startMediaProjection(
+        surface: Surface,
+        projectionName: String = DEFAULT_VALUE_PROJECTION_NAME,
+        width: Int = DEFAULT_VALUE_SIZE_WIDTH,
+        height: Int = DEFAULT_VALUE_SIZE_HEIGHT
+    ) {
+        if (::mediaProjection.isInitialized) {
+            virtualDisplay = mediaProjection.createVirtualDisplay(
+                projectionName,
+                width,
+                height,
+                application.resources.displayMetrics.densityDpi,
+                DisplayManager.VIRTUAL_DISPLAY_FLAG_AUTO_MIRROR,
+                surface,
+                null,
+                null
+            )
+            Log.e("zero", "successStartProjection")
+        } else {
+            Log.e("zero", "faileStartProjection")
+        }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        if (::binding.isInitialized) {
+            windowManager.removeView(binding.root)
+        }
+    }
 }

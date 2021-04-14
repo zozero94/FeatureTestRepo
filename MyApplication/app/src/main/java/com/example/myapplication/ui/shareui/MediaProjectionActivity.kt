@@ -26,18 +26,14 @@ class MediaProjectionActivity : BaseActivity<ActivityMediaprojectionBinding>() {
             getSystemService(Context.MEDIA_PROJECTION_SERVICE) as MediaProjectionManager
         val result: ActivityResultLauncher<Intent> =
             registerForActivityResult(MediaProjectionResultContract(this)) {
-                startService()
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                    startForegroundService(it)
+                } else {
+                    startService(it)
+                }
                 finish()
             }
         result.launch(mediaProjectionManager.createScreenCaptureIntent())
-    }
-
-    private fun startService() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            startForegroundService(MediaProjectionService.newService(this))
-        } else {
-            startService(MediaProjectionService.newService(this))
-        }
     }
 }
 
@@ -49,7 +45,7 @@ internal class MediaProjectionResultContract(private val context: Context) :
 
     override fun parseResult(resultCode: Int, intent: Intent?): Intent? {
         return if (resultCode == Activity.RESULT_OK && intent != null) {
-            MediaProjectionService.newService(context)
+            MediaProjectionService.newService(context, resultCode, intent)
         } else {
             null
         }

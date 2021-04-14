@@ -59,7 +59,9 @@
             android:name=".ui.shareui.MediaProjectionActivity"
             android:theme="@style/Theme.Transparent" />
 
-        <service android:name=".ui.shareui.MediaProjectionService" />
+        <service
+            android:name=".ui.shareui.MediaProjectionService"
+            android:foregroundServiceType="mediaProjection" />
     </application>
 
 </manifest>
