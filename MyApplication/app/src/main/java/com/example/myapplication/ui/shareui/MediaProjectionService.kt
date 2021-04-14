@@ -1,5 +1,6 @@
 package com.example.myapplication.ui.shareui
 
+import android.annotation.SuppressLint
 import android.app.*
 import android.content.Context
 import android.content.Intent
@@ -28,10 +29,12 @@ class MediaProjectionService : Service() {
         private const val CHANNEL_ID = "MediaProjectionService"
 
         fun newService(context: Context, resultCode: Int, requestData: Intent) =
-            Intent(context, MediaProjectionService::class.java).apply {
+            firstStart(context).apply {
                 putExtra(EXTRA_RESULT_CODE, resultCode)
                 putExtra(EXTRA_REQUEST_DATA, requestData)
             }
+
+        fun firstStart(context: Context) = Intent(context, MediaProjectionService::class.java)
 
     }
 
@@ -42,6 +45,7 @@ class MediaProjectionService : Service() {
     }
 
     private lateinit var binding: WindowViewBinding
+    private lateinit var windowViewLayoutParams: WindowManager.LayoutParams
 
     private val windowManager: WindowManager by lazy {
         getSystemService(Context.WINDOW_SERVICE) as WindowManager
@@ -58,9 +62,10 @@ class MediaProjectionService : Service() {
     override fun onCreate() {
         super.onCreate()
         Log.i("zero", "onCreate")
-        startForegroundService()
+        startActivity(MediaProjectionActivity.newIntent(this))
         initBinding(getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater)
         binding.create()
+        startForegroundService()
     }
 
     override fun onStartCommand(intent: Intent, flags: Int, startId: Int): Int {
@@ -104,7 +109,7 @@ class MediaProjectionService : Service() {
 
     private fun initBinding(layoutInflater: LayoutInflater) {
         binding = WindowViewBinding.inflate(layoutInflater, null, false)
-        val params = WindowManager.LayoutParams(
+        windowViewLayoutParams = WindowManager.LayoutParams(
             WindowManager.LayoutParams.WRAP_CONTENT, WindowManager.LayoutParams.WRAP_CONTENT,
             30, 30,  // X, Y 좌표
             WindowManager.LayoutParams.TYPE_TOAST
@@ -115,14 +120,20 @@ class MediaProjectionService : Service() {
         ).apply {
             gravity = Gravity.TOP or Gravity.START
         }
-
-        windowManager.addView(binding.root, params)
+        windowManager.addView(binding.root, windowViewLayoutParams)
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     private fun WindowViewBinding.create() {
         surfaceView.holder.addCallback(surfaceViewHolder)
-//        root.setOnTouchListener(WindowTouchEvent(updateViewLayout = ::updateViewPosition))
+        root.setOnTouchListener(WindowTouchEvent(updateViewLayout = ::updateViewPosition))
         btnStopService.setOnClickListener { stopSelf() }
+    }
+
+    private fun updateViewPosition(x: Int, y: Int) {
+        windowViewLayoutParams.x += x
+        windowViewLayoutParams.y += y
+        windowManager.updateViewLayout(binding.root, windowViewLayoutParams)
     }
 
     private fun initMediaProjection(intent: Intent) {
@@ -169,8 +180,21 @@ class MediaProjectionService : Service() {
 
     override fun onDestroy() {
         super.onDestroy()
+        stopMediaProjection()
         if (::binding.isInitialized) {
             windowManager.removeView(binding.root)
+        }
+    }
+
+    private fun stopMediaProjection() {
+        try {
+            if (::mediaProjection.isInitialized) {
+                mediaProjection.stop()
+            }
+            if (::virtualDisplay.isInitialized) {
+                virtualDisplay.release()
+            }
+        } catch (e: Exception) {
         }
     }
 }

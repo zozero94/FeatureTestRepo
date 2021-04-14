@@ -17,16 +17,16 @@ class ShareUiActivity : BaseActivity<ActivityShareuiBinding>() {
     override val layoutId: Int
         get() = R.layout.activity_shareui
 
+    companion object {
+        fun newIntent(context: Context) = Intent(context, ShareUiActivity::class.java)
+    }
+
     private val canOverlay = registerForActivityResult(OverlayActivityResultContract()) {
         if (it) {
-            startActivity(MediaProjectionActivity.newIntent(this))
+            runService()
         } else {
             toast(this, "거절띠")
         }
-    }
-
-    companion object {
-        fun newIntent(context: Context) = Intent(context, ShareUiActivity::class.java)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,11 +34,19 @@ class ShareUiActivity : BaseActivity<ActivityShareuiBinding>() {
         binding.btnStartMediaProjectionService.setOnClickListener {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {//minSdk 버전 높아서 없어도 될듯
                 if (Settings.canDrawOverlays(this)) {
-                    startActivity(MediaProjectionActivity.newIntent(this))
+                    runService()
                 } else {
                     canOverlay.launch("package:$packageName")
                 }
             }
+        }
+    }
+
+    private fun runService() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            startForegroundService(MediaProjectionService.firstStart(this))
+        } else {
+            startService(MediaProjectionService.firstStart(this))
         }
     }
 }
