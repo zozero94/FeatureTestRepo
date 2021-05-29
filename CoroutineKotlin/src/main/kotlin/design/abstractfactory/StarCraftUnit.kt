@@ -1,57 +1,56 @@
 package design.abstractfactory
 
-interface Unit {
+interface StarCraftUnit {
     fun attack()
 }
 
-interface Terran : Unit
-interface Protoss : Unit
+interface TerranUnit : StarCraftUnit
+interface ProtossUnit : StarCraftUnit
 
-class Zealot : Protoss {
+class Zealot : ProtossUnit {
     override fun attack() {
         println("땈땈")
     }
 }
 
-class Dragon : Protoss {
+class Dragon : ProtossUnit {
     override fun attack() {
         println("니조랄")
     }
 }
 
-class DarkTemplar : Protoss {
+class DarkTemplar : ProtossUnit {
     override fun attack() {
         println("스컹스컹")
     }
 }
 
-class HighTemplar : Protoss {
+class HighTemplar : ProtossUnit {
     override fun attack() {
         println("지직지직")
     }
 }
 
-class Marine :Terran{
+class Marine :TerranUnit{
     override fun attack() {
         println("투둥 투둥")
     }
 }
 
-class Firebat :Terran{
+class Firebat :TerranUnit{
     override fun attack() {
         println("빨간바지")
     }
 }
 
-class Medic:Terran{
+class Medic:TerranUnit{
     override fun attack() {
         println("아앙...❤")
     }
 }
 
-class Ghost:Terran{
+class Ghost:TerranUnit{
     override fun attack() {
         println("수레기")
     }
-
 }
