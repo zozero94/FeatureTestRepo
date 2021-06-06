@@ -1,56 +1,65 @@
 package design.abstractfactory
 
-interface StarCraftUnit {
-    fun attack()
+abstract class StarCraftUnit {
+    abstract val mineral: Int
+    abstract val gas: Int
+    abstract fun attack()
 }
 
-interface TerranUnit : StarCraftUnit
-interface ProtossUnit : StarCraftUnit
+abstract class TerranUnit : StarCraftUnit() {
 
-class Zealot : ProtossUnit {
-    override fun attack() {
-        println("땈땈")
+    sealed class BarrackUnit : TerranUnit() {
+        class Marine(override val mineral: Int = 50, override val gas: Int = 0) : BarrackUnit() {
+            override fun attack() {
+                println("$this : 투둥 투둥")
+            }
+        }
+
+        class Firebat(override val mineral: Int = 50, override val gas: Int = 25) : BarrackUnit() {
+            override fun attack() {
+                println("$this 빨간바지")
+            }
+        }
+
+        class Medic(override val mineral: Int = 50, override val gas: Int = 25) : BarrackUnit() {
+            override fun attack() {
+                println("$this 아앙...❤")
+            }
+        }
+
+        class Ghost(override val mineral: Int = 25, override val gas: Int = 75) : BarrackUnit() {
+            override fun attack() {
+                println("$this 수레기")
+            }
+        }
     }
 }
 
-class Dragon : ProtossUnit {
-    override fun attack() {
-        println("니조랄")
-    }
-}
+abstract class ProtossUnit : StarCraftUnit() {
 
-class DarkTemplar : ProtossUnit {
-    override fun attack() {
-        println("스컹스컹")
-    }
-}
+    sealed class GateWayUnit : ProtossUnit() {
+        class Zealot(override val mineral: Int = 100, override val gas: Int = 0) : GateWayUnit() {
+            override fun attack() {
+                println("$this 땈땈")
+            }
+        }
 
-class HighTemplar : ProtossUnit {
-    override fun attack() {
-        println("지직지직")
-    }
-}
+        class Dragon(override val mineral: Int = 125, override val gas: Int = 50) : GateWayUnit() {
+            override fun attack() {
+                println("$this 니조랄")
+            }
+        }
 
-class Marine :TerranUnit{
-    override fun attack() {
-        println("투둥 투둥")
-    }
-}
+        class DarkTemplar(override val mineral: Int = 125, override val gas: Int = 100) : GateWayUnit() {
+            override fun attack() {
+                println("$this 스컹스컹")
+            }
+        }
 
-class Firebat :TerranUnit{
-    override fun attack() {
-        println("빨간바지")
-    }
-}
-
-class Medic:TerranUnit{
-    override fun attack() {
-        println("아앙...❤")
-    }
-}
-
-class Ghost:TerranUnit{
-    override fun attack() {
-        println("수레기")
+        class HighTemplar(override val mineral: Int = 50, override val gas: Int = 150) : GateWayUnit() {
+            override fun attack() {
+                println("$this 지직지직")
+            }
+        }
     }
 }
