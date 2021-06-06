@@ -1,42 +1,53 @@
 package design.abstractfactory
 
+import kotlin.reflect.KClass
+import kotlin.reflect.full.superclasses
+
 abstract class UnitFactory {
-    abstract fun createUnit(unit: StarCraftUnit): StarCraftUnit
+    abstract fun <T : StarCraftUnit> createUnit(kClass: KClass<T>): StarCraftUnit
 
     companion object {
-        fun createInstance(type: StarCraftUnit): StarCraftUnit {
-            return when (type) {
-                is TerranUnit -> Barrack().createUnit(type)
-                is ProtossUnit -> GateWay().createUnit(type)
-                else -> throw IllegalStateException("없는 종족입니다.")
+        inline fun <reified T : StarCraftUnit> createInstance(): StarCraftUnit {
+            return createInstance(T::class)
+        }
+
+        fun <T : StarCraftUnit> createInstance(kClass: KClass<T>): StarCraftUnit {
+            kClass.superclasses.forEach { superClass ->
+                return when (superClass) {
+                    TerranUnit.BarrackUnit::class -> {
+                        Barrack().createUnit(kClass)
+                    }
+                    ProtossUnit.GateWayUnit::class -> {
+                        GateWay().createUnit(kClass)
+                    }
+                    else -> throw IllegalStateException("없는 구조물 입니다. $superClass")
+                }
             }
+            throw IllegalStateException("존재하지 않는 클래스타입 입니다. $kClass")
         }
     }
 }
 
-internal class Barrack : UnitFactory() {
-    override fun createUnit(unit: StarCraftUnit): TerranUnit {
-        check(unit is TerranUnit) { "테란 유닛이 아닙니다." }
-
-        return when (unit) {
-            is TerranUnit.BarrackUnit.Marine -> TerranUnit.BarrackUnit.Marine()
-            is TerranUnit.BarrackUnit.Firebat -> TerranUnit.BarrackUnit.Firebat()
-            is TerranUnit.BarrackUnit.Medic -> TerranUnit.BarrackUnit.Medic()
-            is TerranUnit.BarrackUnit.Ghost -> TerranUnit.BarrackUnit.Ghost()
-            else -> throw IllegalStateException("없는 유닛입니다.")
+class Barrack : UnitFactory() {
+    override fun <T : StarCraftUnit> createUnit(kClass: KClass<T>): TerranUnit {
+        return when (kClass) {
+            TerranUnit.BarrackUnit.Marine::class -> TerranUnit.BarrackUnit.Marine()
+            TerranUnit.BarrackUnit.Firebat::class -> TerranUnit.BarrackUnit.Firebat()
+            TerranUnit.BarrackUnit.Medic::class -> TerranUnit.BarrackUnit.Medic()
+            TerranUnit.BarrackUnit.Ghost::class -> TerranUnit.BarrackUnit.Ghost()
+            else -> throw IllegalStateException("없는 유닛입니다. $kClass")
         }
     }
 }
 
-internal class GateWay : UnitFactory() {
-    override fun createUnit(unit: StarCraftUnit): ProtossUnit {
-        check(unit is ProtossUnit) { "프로토스 유닛이 아닙니다." }
-        return when (unit) {
-            is ProtossUnit.GateWayUnit.Zealot -> ProtossUnit.GateWayUnit.Zealot()
-            is ProtossUnit.GateWayUnit.Dragon -> ProtossUnit.GateWayUnit.Dragon()
-            is ProtossUnit.GateWayUnit.HighTemplar -> ProtossUnit.GateWayUnit.HighTemplar()
-            is ProtossUnit.GateWayUnit.DarkTemplar -> ProtossUnit.GateWayUnit.DarkTemplar()
-            else -> throw IllegalStateException("없는 유닛입니다.")
+class GateWay : UnitFactory() {
+    override fun <T : StarCraftUnit> createUnit(kClass: KClass<T>): ProtossUnit {
+        return when (kClass) {
+            ProtossUnit.GateWayUnit.Zealot::class -> ProtossUnit.GateWayUnit.Zealot()
+            ProtossUnit.GateWayUnit.Dragon::class -> ProtossUnit.GateWayUnit.Dragon()
+            ProtossUnit.GateWayUnit.HighTemplar::class -> ProtossUnit.GateWayUnit.HighTemplar()
+            ProtossUnit.GateWayUnit.DarkTemplar::class -> ProtossUnit.GateWayUnit.DarkTemplar()
+            else -> throw IllegalStateException("없는 유닛입니다. $kClass")
 
         }
     }
