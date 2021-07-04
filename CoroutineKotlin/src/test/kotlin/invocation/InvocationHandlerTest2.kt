@@ -15,11 +15,15 @@ class InvocationHandlerTest2 {
 
     @Test
     fun phaseCallKakao() {
-        api.callKakao()
+        val res = api.callKakao()
+        println(res)
+        assert(res.author=="zero.dev")
     }
 
     @Test
     fun phaseCallGoogle() {
-        api.callGoogle()
+        val res = api.callGoogle()
+        println(res)
+        assert(res.author=="로버트 마틴")
     }
 }
