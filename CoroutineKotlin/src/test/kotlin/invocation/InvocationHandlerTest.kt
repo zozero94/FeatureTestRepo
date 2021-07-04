@@ -1,7 +1,5 @@
-import invocation.Body
-import invocation.Event
-import invocation.RequestBody
-import invocation.TestEvent
+package invocation
+
 import org.junit.Before
 import org.junit.Test
 
