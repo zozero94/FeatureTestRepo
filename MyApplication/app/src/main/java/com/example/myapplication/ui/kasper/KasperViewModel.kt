@@ -2,18 +2,20 @@ package com.example.myapplication.ui.kasper
 
 import android.text.Editable
 import android.text.TextWatcher
-import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.jakewharton.rxrelay3.BehaviorRelay
+import dagger.hilt.android.lifecycle.HiltViewModel
 import io.reactivex.rxjava3.schedulers.Schedulers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import java.util.concurrent.TimeUnit
+import javax.inject.Inject
 
-class KasperViewModel @ViewModelInject constructor() : ViewModel() {
+@HiltViewModel
+class KasperViewModel @Inject constructor() : ViewModel() {
     private val _showToolTip = MutableLiveData<Boolean>()
     fun isShowToolTip(): LiveData<Boolean> = _showToolTip
 

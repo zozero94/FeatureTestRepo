@@ -74,10 +74,8 @@ dependencies {
      * DI 관련
      */
     //hilt
-    implementation 'com.google.dagger:hilt-android:2.31-alpha'
-    implementation "androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03"
-    kapt 'com.google.dagger:hilt-android-compiler:2.30.1-alpha'
-    kapt "androidx.hilt:hilt-compiler:1.0.0"
+    implementation 'com.google.dagger:hilt-android:2.37'
+    kapt 'com.google.dagger:hilt-compiler:2.37'
 
     /**
      * 코루틴 관련
@@ -135,4 +133,7 @@ dependencies {
 
     api 'org.webrtc:google-webrtc:1.0.32006'
 
+}
+kapt {
+    correctErrorTypes true
 }

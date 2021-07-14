@@ -5,6 +5,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 
 sealed class TestType(var intent: Intent? = null, val text: String) {
     class KasperTest(intent: Intent? = null, text: String) : TestType(intent, text)
@@ -23,7 +24,7 @@ sealed class TestType(var intent: Intent? = null, val text: String) {
 }
 
 @HiltViewModel
-class MainViewModel : ViewModel() {
+class MainViewModel @Inject constructor() : ViewModel() {
     private val listItem = MutableLiveData<List<TestType>>()
 
     fun getItemList(): LiveData<List<TestType>> = listItem
