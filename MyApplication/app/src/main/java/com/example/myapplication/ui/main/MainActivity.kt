@@ -46,7 +46,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         )
 
         mainViewModel.getItemList().observe(this, {
-            adapter.replaceItems(it)
+            adapter.submitList(it)
         })
     }
 
