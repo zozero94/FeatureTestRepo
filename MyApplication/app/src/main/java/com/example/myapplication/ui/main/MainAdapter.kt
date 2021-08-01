@@ -8,25 +8,26 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.databinding.ListItemMainBinding
 
-class MainAdapter(var onClick: ((Intent?) -> Unit)? = null) :
+class MainAdapter(private val onClick: ((Intent?) -> Unit)) :
     ListAdapter<TestType, MainAdapter.MainViewHolder>(object : DiffUtil.ItemCallback<TestType>() {
         override fun areItemsTheSame(oldItem: TestType, newItem: TestType): Boolean =
-            oldItem.text == newItem.text
+            oldItem == newItem
 
         override fun areContentsTheSame(oldItem: TestType, newItem: TestType): Boolean =
             oldItem == newItem
-
     }) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainViewHolder {
         val binding = ListItemMainBinding.inflate(LayoutInflater.from(parent.context))
         return MainViewHolder(binding).apply {
-            itemView.setOnClickListener { onClick?.invoke(currentList[adapterPosition].intent) }
+            itemView.setOnClickListener {
+                onClick.invoke(currentList[absoluteAdapterPosition].intent)
+            }
         }
     }
 
     override fun onBindViewHolder(holder: MainViewHolder, position: Int) =
-        holder.bind(currentList[position].text)
+        holder.bind(currentList[position]::class.java.simpleName)
 
     override fun getItemCount(): Int = currentList.size
 
