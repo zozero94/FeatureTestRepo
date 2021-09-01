@@ -33,9 +33,5 @@ c
 3src/test/kotlin/invocation/InvocationHandlerTest.kt,9/1/91bca46da8a1b1b2d75984421a701d4a46d8d9f1
 d
 4src/test/kotlin/invocation/InvocationHandlerTest2.kt,a/e/aef24f11a0996e826a5e1742d9c69c695d7c3f30
-G
-src/main/kotlin/main.kt,c/6/c69f6521fbcd7e5c96e8b6513bbf422d06ed06ae
-S
-#.idea/sonarlint/issuestore/index.pb,9/f/9fe84ebb15faf917b7def6236dba604453cc61e0
 O
 src/test/kotlin/ListScanTest.kt,f/3/f331840445ceca06851a7d10f7a405c92d8fa957
